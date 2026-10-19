@@ -11,11 +11,14 @@ else
 endif
 
 
-all : repres.exe nlqfast.exe 
+all : basis.exe repres.exe nlqfast.exe 
 
 debug:
 	$(MAKE)  -B DEBUG=1
 
+
+basis.exe : basis.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole 
 
 nlqfast.exe : nlqfast.c
 	gcc $(CFLAGS) -fopenmp -Wall  $^  -o $@  -lboole  -lgmp 
@@ -23,7 +26,11 @@ nlqfast.exe : nlqfast.c
 repres.exe : repres.c
 	gcc $(CFLAGS) -fopenmp -Wall  $^  -o $@  -lboole  -lgmp 
 
-
+web        :
+	cp B357.html  ~/web-docs/project/B357/B357.html 
+	lien ou812
+	save 
+	
 
 clean :
 	rm -f *.exe
