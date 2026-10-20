@@ -28,8 +28,7 @@ repres.exe : repres.c
 
 web        :
 	cp B357.html  ~/web-docs/project/B357/B357.html 
-	lien ou812
-	save 
+	cp NQ-38-40-3-5-7.txt  ~/web-docs/project/B357/. 
 	
 
 clean :
