@@ -11,11 +11,26 @@ else
 endif
 
 
-all : basis.exe repres.exe nlqfast.exe 
+all : onthefly.exe zipcheck.exe check.exe liste.exe basis.exe repres.exe nlqfast.exe 
 
 debug:
 	$(MAKE)  -B DEBUG=1
 
+common.o  : common.c
+	gcc $(CFLAGS)  $^  -c  
+
+onthefly.exe : common.o onthefly.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -fopenmp -lboole -lgmp
+
+
+liste.exe : common.o liste.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
+
+check.exe : common.o check.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
+
+zipcheck.exe : common.o zipcheck.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
 
 basis.exe : basis.c
 	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
