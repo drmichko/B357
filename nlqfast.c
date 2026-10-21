@@ -173,10 +173,9 @@ int main(int argc, char *argv[])
     basis_t base = monomialBasis(3, 3, 7);
 
     boole h = loadBoole(src);
-    uint64_t orbits;
-    if (!value(src, &orbits)) exit(1);
+    
     fclose(src);
-
+    
     if (ffsize != N) {
         fprintf(stderr, "ffsize=%d, attendu %d\n", (int) ffsize, N);
         exit(1);
@@ -185,7 +184,11 @@ int main(int argc, char *argv[])
     printf("\nUsing no %d  (threads: %d)\n", target, nbproc );
     fflush(stdout);
 
+    uint64_t orbits = 0;
     uchar *zip = loadZipname(target, &base);
+    int bitinbyte[8] = {0, 1, 1, 2, 1, 2, 2, 3};
+    for( size_t i = 0; i <  (1ULL << 32 ) ; i++ )
+	    orbits += bitinbyte[ zip[ i ] ];
     vector vend = find_end(zip, base.size, orbits);
 
     /* --- Précalculs en lecture seule, partagés par tous les threads --- */

@@ -18,7 +18,7 @@ debug:
 
 
 basis.exe : basis.c
-	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole 
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
 
 nlqfast.exe : nlqfast.c
 	gcc $(CFLAGS) -fopenmp -Wall  $^  -o $@  -lboole  -lgmp 
@@ -26,10 +26,12 @@ nlqfast.exe : nlqfast.c
 repres.exe : repres.c
 	gcc $(CFLAGS) -fopenmp -Wall  $^  -o $@  -lboole  -lgmp 
 
+infos      :
+	./repres.exe  > info-3-5-7.txt
 web        :
 	cp B357.html  ~/web-docs/project/B357/B357.html 
 	cp NQ-38-40-3-5-7.txt  ~/web-docs/project/B357/. 
-	
+	cp infos-3-5-7.txt  ~/web-docs/project/B357/. 
 
 clean :
 	rm -f *.exe

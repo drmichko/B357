@@ -17,6 +17,16 @@
 #define M      7
 #define N      (1 << M)
 
+    int dimen = 7;
+    int target = 0;
+    int goal = 38;
+    int nbproc = 0;
+    int optwrite = 0;
+    char *dirname = "../tools/data";
+    basis_t base;
+    uint64_t total = 0, card;
+
+    int verb = 0;
 
 uchar *loadZipname(char *dirname, int target, basis_t *b)
 {
@@ -52,53 +62,32 @@ uchar *loadZipname(char *dirname, int target, basis_t *b)
     return res;
 }
 
-int value(FILE *src, uint64_t *v)
-{
-    char  *line = NULL;
-    size_t cap  = 0;
-    while (getline(&line, &cap, src) != -1)
-        for (const char *p = line; *p; p++)
-            if (sscanf(p, "#orbits=%" SCNu64, v) == 1) {
-                free(line);
-                return 1;
-            }
 
-    free(line);
-    return 0;
-}
 
-static vector find_end(const uchar *zip, vector size, uint64_t orbits)
+static size_t doit( int num, uint64_t order, boole h, aglGroup g)
 {
-    if (orbits == 0) return 0;
-    uint64_t count = 0;
-    vector nbytes = size / 8;
-    for (vector b = 0; b < nbytes; b++) {
-        int pc = __builtin_popcount(zip[b]);
-        if (count + pc >= orbits) {
-            for (int k = 0; k < 8; k++)
-                if ((zip[b] >> k) & 1)
-                    if (++count == orbits) return b * 8 + k + 1;
-        }
-        count += pc;
-    }
-    return size;
-}
-
-static int cmp_u64(const void *a, const void *b)
-{
-    uint64_t x = *(const uint64_t *) a, y = *(const uint64_t *) b;
-    return (x > y) - (x < y);
+    uchar *zip = loadZipname(dirname, num , &base);
+    assert( zip != NULL );
+    vector last  = 1ULL << 32;
+    while ( ! zip[last] ) last--;
+const uint64_t *w = (const uint64_t *)zip;
+uint64_t count = 0;
+#pragma omp parallel for reduction(+:count) schedule(static)
+for (size_t i = 0;  i < (1ULL << 29); i++)
+    count += __builtin_popcountll(w[i]);
+free( zip );       
+printf("#num=%3d stabSize=%ld orbits=%ld last=%ld", num, order, count, last );
+panf( stdout, h );
+paglGroup( stdout, g );
+printf("\nstabSize=%ld\n\n", order);
+return count;
 }
 
 int main(int argc, char *argv[])
 {
     int opt;
-    int dimen = 7;
-    int target = 0;
-    int goal = 38;
-    int nbproc =  omp_get_max_threads();
-    int optwrite = 0;
-    char *dirname = "data";
+    nbproc =  omp_get_max_threads();
+    card   =  aglCardinality( 7 );
     while ((opt = getopt(argc, argv, "i:f:c:wb:d:m:r:t:g:ip:")) != -1) {
         switch (opt) {
         case 'w': optwrite++;break;
@@ -113,102 +102,31 @@ int main(int argc, char *argv[])
         }
     }
 
-    if (!target) return 0;
+    printf("\nUsing %d threads...\n", nbproc );
 
-    char name[128];
-    sprintf(name, "rho/rho-%d.out", target);
+    char *fn = "../boole/data/B-4-5-7.dat";
+    FILE *src = fopen( fn ,"r");
+    if (!src) { perror(  fn ); exit(1); }
 
-    FILE *src = fopen(name, "r");
-    if (!src) { perror(name); exit(1); }
     initboole(dimen);
     initagldim(dimen);
 
-    basis_t base = monomialBasis(3, 3, 7);
-
-    boole h = loadBoole(src);
-    uint64_t orbits;
-    if (!value(src, &orbits)) exit(1);
+    base = monomialBasis(3, 3, 7);
+    int item = 0;
+    boole h;
+    size_t grpSize;
+    aglGroup grp = NULL;
+    while ( ( h = loadaglboolesize(src, &grp, &grpSize) )){
+		item++;
+		if (  item < 179 ) 
+			total += doit( item, grpSize, h , grp );
+		else 
+			total += 12;
+		aglfreeGroup( grp );
+		free(h);
+    }
     fclose(src);
-
-    if (ffsize != N) {
-        fprintf(stderr, "ffsize=%d, attendu %d\n", (int) ffsize, N);
-        exit(1);
-    }
-    printf("\nUsing no %d  (threads: %d)\n", target, nbproc );
+    printf("\n\nclass number=%ld\n", total );
     fflush(stdout);
-
-    uchar *zip = loadZipname(dirname, target, &base);
-    vector vend = find_end(zip, base.size, orbits);
-
-
-    const int nbl = (int) base.mat.nbl;
-    uint64_t (*fct64)[2] = calloc((size_t) nbl, sizeof *fct64);
-    if (!fct64) { perror("fct64"); exit(1); }
-    for (int j = 0; j < nbl; j++)
-        for (int x = 0; x < ffsize; x++)
-            if (base.mat.fct[j][x])
-                fct64[j][x >> 6] |= 1ULL << (x & 63);
-
-    uint64_t h64[2] = {0, 0};
-    for (int x = 0; x < ffsize; x++)
-        if (h[x]) h64[x >> 6] |= 1ULL << (x & 63);
-
-    /* --- Solutions : on stocke les v, affichage séquentiel et trié après --- */
-    size_t cap = 1024, nsol = 0;
-    uint64_t *sol = malloc(cap * sizeof *sol);
-    if (!sol) { perror("sol"); exit(1); }
-
-    size_t count = 0;
-    double t0 = omp_get_wtime();
-
-    #pragma omp parallel for schedule(dynamic, 4096) reduction(+:count)
-    for (vector v = 0; v < vend; v++) {
-        if (!((zip[v / 8] >> (v % 8)) & 1)) continue;
-        count++;
-
-        /* f + h directement sous forme de 2 mots de 64 bits */
-        uint64_t tt[2] = { h64[0], h64[1] };
-        for (int j = 0; j < nbl; j++)
-            if (BITVECTOR(j, v)) {
-                tt[0] ^= fct64[j][0];
-                tt[1] ^= fct64[j][1];
-            }
-
-            #pragma omp critical(sol)
-            {
-                if (nsol == cap) {
-                    cap *= 2;
-                    sol = realloc(sol, cap * sizeof *sol);
-                    if (!sol) { perror("realloc"); exit(1); }
-                }
-                sol[nsol++] = (uint64_t) v;
-            }
-        }
-
-    double temps = omp_get_wtime() - t0;
-    sprintf(name, "results/repres-%d.txt", target);
-    FILE *dst = stdout;
-    if (  optwrite ) 
-    	dst = fopen( name, "a" );;
-    /* --- Affichage séquentiel, dans l'ordre des v (comme la version série) --- */
-    fprintf(dst, "\nUsing no %d  (threads: %d)\n", target, nbproc );
-    fprintf(dst, "\n#%zu members have NL_2=38 :\n", nsol);
-    qsort(sol, nsol, sizeof *sol, cmp_u64);
-    for (size_t i = 0; i < nsol; i++) {
-        boole f = vectortoboole((vector) sol[i], &base);
-        for (int x = 0; x < ffsize; x++) f[x] ^= h[x];
-        panf( dst, f);
-        free(f);
-    }
-    fflush(dst);
-
-    fprintf(dst, "\n#orbit=%" PRIu64 " count=%zu  %zu\n", orbits, count, nsol);
-    fprintf(dst, "\n#runtime : %.6f secondes (mur)\n", temps);
-
-    fclose( dst );
-    free(sol);
-    free(fct64);
-    free(zip);
-
     return 0;
 }
