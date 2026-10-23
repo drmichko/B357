@@ -11,7 +11,7 @@ else
 endif
 
 
-all : onthefly.exe zipcheck.exe check.exe liste.exe basis.exe repres.exe nlqfast.exe 
+all : onthefly.exe zipcheck.exe check.exe read.exe write.exe basis.exe repres.exe nlqfast.exe 
 
 debug:
 	$(MAKE)  -B DEBUG=1
@@ -23,7 +23,10 @@ onthefly.exe : common.o onthefly.c
 	gcc $(CFLAGS) -Wall  $^  -o $@  -fopenmp -lboole -lgmp
 
 
-liste.exe : common.o liste.c
+write.exe : common.o  write.c
+	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
+
+read.exe : common.o  read.c
 	gcc $(CFLAGS) -Wall  $^  -o $@  -lgmp  -lboole -lgmp
 
 check.exe : common.o check.c

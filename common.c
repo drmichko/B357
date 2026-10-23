@@ -19,6 +19,30 @@ int getinfoparms( int num, size_t *stab, size_t *orb, size_t *last )
  return 0;
 }
 
+
+boole getfullinfos( int num, size_t *stab, size_t *orb, size_t *last , aglGroup * grp )
+{   char buffer[1024];
+    FILE* srcFile = fopen( "info-3-5-7.txt", "r" );
+    if ( ! srcFile ) {
+            perror( "info?" );
+            exit(1);
+    }
+    while ( fgets( buffer, 1024, srcFile ) ){
+            int tmp;
+            if ( sscanf( buffer, "#num=%d  stabSize=%ld orbits=%ld last=%ld", &tmp, stab, orb, last  ) == 4 ) {
+                    if ( tmp == num ) {
+			    size_t size;
+			boole  h  = loadaglboolesize( srcFile, grp,  &size);
+			assert( *stab ==  size );
+                        fclose( srcFile);
+                        return h;
+                    }
+            }
+    }
+ fclose( srcFile);
+ return NULL;
+}
+
 uchar *loadZiptarget(char *dirname, int target, basis_t *b)
 {
     FILE *srcFile;
@@ -52,3 +76,7 @@ uchar *loadZiptarget(char *dirname, int target, basis_t *b)
     fclose(srcFile);
     return res;
 }
+
+
+
+

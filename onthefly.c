@@ -14,6 +14,7 @@
 
 #include "boolean.h"
 #include "orbitools.h"
+#include "common.h"
 
 
 #include <stdatomic.h>   
@@ -54,53 +55,6 @@ while ( g ) {
 return 1;
 }
 
-int aglrankvector (vector *s, int dim )
-{   
-int i, l;
-vector  bit, x[ dim ]; 
-for( i = 0;  i < dim; i++ )
-	x[i] = s[i];
-i=0;
-while ( i < dim ) {
-  if ( x[i] ) {
-        bit = x[i];
-        bit = bit ^ ( bit & ( bit - 1) );
-        for( l = 0; l < dim; l++)
-          if ( l != i )
-                if ( bit & x[l] ) x[l] ^= x[i];
-        i++;
-   } else {
-        dim = dim - 1;
-        x[i] = x[ dim ];
-   }
- }
-return dim;
-}
-
-
-uint64_t nbfixed(const uint64_t *s, int dim)   // dim = 35, s a 36 éléments
-{
-    const uint64_t mask = (1ULL << dim) - 1;
-    uint64_t basis[64] = {0};                  // basis[h] : vecteur de bit de poids fort h
-    int rank = 0;
-
-    for (int i = 0; i < dim; i++) {
-        uint64_t v = (s[i] & mask) ^ (1ULL << i);   // colonne i de L+I
-        while (v) {
-            int h = 63 - __builtin_clzll(v);
-            if (!basis[h]) { basis[h] = v; rank++; break; }
-            v ^= basis[h];
-        }
-    }
-
-    uint64_t b = s[dim] & mask;                // f(0)
-    while (b) {
-        int h = 63 - __builtin_clzll(b);
-        if (!basis[h]) return 0;               // b hors de l'image : aucun point fixe
-        b ^= basis[h];
-    }
-    return 1ULL << (dim - rank);
-}
 
 aglVector myboundaryAction(boole f, agl s, basis_t * b)
 {
@@ -133,10 +87,6 @@ aglVector myboundaryAction(boole f, agl s, basis_t * b)
 int main(int argc, char *argv[])
 {  
 
-    char *fn = "../boole/data/B-4-5-7.dat";
-
-
-    aglGroup g = NULL;
     int opt, optw = 0; 
     int dimen = 7;
     int target = 0;
@@ -155,7 +105,6 @@ int main(int argc, char *argv[])
 		dimen  = atoi( optarg);
 	break;
 	case 'f': 
-		fn = strdup( optarg );
                 break;
 	case 'r':
 	    break;
@@ -169,68 +118,52 @@ int main(int argc, char *argv[])
     }
 
 
+
     printf("\nthread=%d\n", nbthread );
-    FILE *src = fopen( fn, "r" );
+
     initboole(  dimen );
     initagldim( dimen );
 
-    boole f;
-    int item = 0;
-    uint64_t size = 0;
+    uint64_t stabSize, orb, last;
+    aglGroup grp = NULL;
+
+    boole f = getfullinfos( target, &stabSize, &orb, &last, &grp );
+    if ( ! f ) {
+	    puts("infos?");
+	    return 1;
+    }
+   
     basis_t base = monomialBasis( 3, 3, 7 );
     initBrowse( &base );
-    while ((f = loadaglboolesize( src , &g, &size ))) {
-		item++;
-	        //panf( stderr, f );	
-		//fprintf(stderr,  "\nitem=%d degree=%d order=%ld\n", item, degree(f), size );
-		//paglGroup( stderr, g );
-                if ( item == target ) 
-			break;
-		aglfreeGroup( g );
-		free(f);
-		g=NULL;
-    }
-    if ( item != target ){
-	    exit(0);
-    }
-    if ( size > 1024 ) {
+
+
+    if ( stabSize > 1024 ) {
 	    puts("too large");
 	    exit ( 0 );
     }
-    fclose(src);
 
     FILE* dst = stdout;
 
     double debut = omp_get_wtime();
  
     panf( dst , f );
-    fprintf( dst, "\nitem=%d degree=%d order=%ld\n", item, degree(f), size );
-    paglGroup( stderr , g );
-    assert( degree( f ) > 4  );
-    assert(  checkstab( f, g,  3) == 1 );
-    agl*  table = devGroup( g, &size );
-    aglVectorGroup G = aglBoundaryGroupAction( f, g, &base );
-    size_t  count = 0;
+    fprintf( dst, "\nitem=%d degree=%d order=%ld\n", target , degree(f), stabSize );
+    
+    size_t tmp;
+    agl* table = devGroup(  grp, &tmp );
+    assert ( tmp == stabSize ); 
+    aglVector *L = calloc( stabSize, sizeof( aglVector ) );
+    for (size_t i = 0; i < stabSize; i++) 
+	    L[i] = boundaryAction( f , table[i], &base );
 
-    aglVector *L = calloc( size, sizeof( aglVector ) );
-    for( size_t i = 0;  i < size; i++ ) {
-        assert(  checks( f, table[i],  3) == 1 );
-    	L[i]   = myboundaryAction(  f, table[ i ], &base );
-	vector tmp = nbfixed( L[i] , 35  );
-	count+= tmp;
-    }
-    assert( count % size  == 0 );  
-    size_t burnside = count / size;
-    fprintf( stderr, "\n#orbits=%ld\n", burnside );
-
+    // here we checked using Burnside formula...
 omp_set_num_threads(nbthread);
 
-
-#pragma omp for schedule(guided) 
+#pragma omp parallel for schedule(guided)
     for (vector v = 0; v < base.size; v++) {
         if (base.table[v]) continue;
         int is_rep = 1;
-        for (size_t i = 0; i < size; i++) {
+        for (size_t i = 0; i < stabSize; i++) {
             vector y = aglVectorImages(v, L[i], 35);
             if (y < v) { is_rep = 0; break; }
             if (y > v) base.table[y] = 1;
@@ -247,14 +180,13 @@ size_t reps = 0;
             reps += base.table[v] ;
     }
 
-    assert( reps == burnside );
+    assert( reps == orb);
     double fin = omp_get_wtime();
     double temps = (double)(fin - debut);
     fprintf(dst, "\nruntime : %.1f secondes\n", temps);
 
 
-    aglfreeGroup( g );
-    aglVectorGroupFree(  G );
+    aglfreeGroup( grp );
     free( base.table );
     
     free( f );
