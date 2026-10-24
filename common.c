@@ -1,4 +1,35 @@
 #include "common.h"
+#include <unistd.h>
+int dimen = 7;
+int target = 0;
+int goal = 38;
+int nbproc;
+int optw=0;
+
+void help( void )
+{
+system( "sed -n '/^[a-zA-Z_].*\\boption\\s*(/,/^}/p' common.c");
+}
+
+void option( int argc, char* argv[] )
+{
+	int opt;
+    while ((opt = getopt(argc, argv, "i:f:c:wb:d:m:r:t:g:ip:h")) != -1) {
+        switch (opt) {
+        case 'w': optw=1; break;
+        case 'd': break;
+        case 'c': break;
+        case 'p': nbproc = atoi( optarg );break;
+        case 'm': dimen = atoi(optarg); break;
+        case 'f': break;
+        case 'g': goal = atoi(optarg); break;
+        case 't': target = atoi(optarg); break;
+	case 'h':
+        default :  help(); exit(0);
+        }
+    }
+}
+
 int getinfoparms( int num, size_t *stab, size_t *orb, size_t *last )
 {   char buffer[1024];
     FILE* srcFile = fopen( "info-3-5-7.txt", "r" );

@@ -21,6 +21,7 @@
 #include "orbitData.h"
 #include "boolean.h"
 #include "orbitools.h"
+#include "common.h"
 
 #define M      7
 #define N      (1 << M)
@@ -141,24 +142,8 @@ static int cmp_u64(const void *a, const void *b)
 
 int main(int argc, char *argv[])
 {
-    int opt;
-    int dimen = 7;
-    int target = 0;
-    int goal = 38;
-    int nbproc =  omp_get_max_threads();
-    while ((opt = getopt(argc, argv, "i:f:c:wb:d:m:r:t:g:ip:")) != -1) {
-        switch (opt) {
-        case 'w': break;
-        case 'd': break;
-        case 'c': break;
-        case 'p': nbproc = atoi( optarg );break;
-        case 'm': dimen = atoi(optarg); break;
-        case 'f': break;
-        case 'g': goal = atoi(optarg); break;
-        case 't': target = atoi(optarg); break;
-        default:  exit(0);
-        }
-    }
+    nbproc =  omp_get_max_threads();
+	option( argc, argv );
 
     if (!target) return 0;
 
