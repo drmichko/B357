@@ -46,4 +46,5 @@
 7 anf=abd+acd+bcd+abe+bde+cde+acf+adf+bdf+aef+bcg+adg+abeg+acfg+defg
 7 anf=abc+abe+ace+ade+bde+abf+adf+cdf+aef+bcg+adg+abeg+acfg+defg
 8 anf=acd+bcd+bce+abf+abcg+bdg+aeg+defg
+91 anf=abd+ace+bde+acf+bcf+adf+abcef+cdef+acg+adg+bdg+cdg+abcdg+aeg+aceg+bceg+deg+bdeg+afg+bfg+cfg+bcfg+dfg+adfg+efg
 9 anf=abc+acd+bce+cde+acf+bcf+bdf+abg+bcg+adg+bcfg+defg
