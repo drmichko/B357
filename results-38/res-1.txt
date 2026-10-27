@@ -1,0 +1,27 @@
+
+Using no 1  (threads: 72)
+
+#0 members have NL_2=38 :
+
+#orbit=33660 count=33660  0
+#prange: nps=1024  tests exacts=1755 (5.2139% des candidats)
+
+#runtime : 0.026829 secondes (mur)
+
+Using no 1  (threads: 72)
+
+#0 members have NL_2=38 :
+
+#orbit=33660 count=33660  0
+#prange: nps=1024  tests exacts=1755 (5.2139% des candidats)
+
+#runtime : 0.026353 secondes (mur)
+
+Using no 1  (threads: 72)
+
+#0 members have NL_2=38 :
+
+#orbit=33660 count=33660  0
+#prange: nps=1024  tests exacts=1755 (5.2139% des candidats)
+
+#runtime : 0.038574 secondes (mur)

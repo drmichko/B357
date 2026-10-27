@@ -1,0 +1,9 @@
+
+Using no 131  (threads: 72)
+
+#0 members have NL_2=38 :
+
+#orbit=4617328 count=4617328  0
+#prange: nps=1024  tests exacts=32158 (0.6965% des candidats)
+
+#runtime : 1.033576 secondes (mur)

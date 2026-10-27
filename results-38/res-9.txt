@@ -1,0 +1,10 @@
+
+Using no 9  (threads: 72)
+
+#1 members have NL_2=38 :
+
+anf=abc+acd+bce+cde+acf+bcf+bdf+abg+bcg+adg+bcfg+defg
+#orbit=289 count=289  1
+#prange: nps=1024  tests exacts=9 (3.1142% des candidats)
+
+#runtime : 0.269939 secondes (mur)

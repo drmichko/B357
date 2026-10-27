@@ -1,0 +1,12 @@
+
+Using no 7  (threads: 72)
+
+#3 members have NL_2=38 :
+
+anf=abc+abe+ace+ade+bde+abf+adf+cdf+bcg+adg+abeg+acfg+defg
+anf=abd+acd+bcd+abe+bde+cde+acf+adf+bdf+aef+bcg+adg+abeg+acfg+defg
+anf=abc+abe+ace+ade+bde+abf+adf+cdf+aef+bcg+adg+abeg+acfg+defg
+#orbit=730 count=730  3
+#prange: nps=1024  tests exacts=25 (3.4247% des candidats)
+
+#runtime : 0.291598 secondes (mur)
