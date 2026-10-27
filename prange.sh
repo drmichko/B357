@@ -9,5 +9,5 @@ do
 		gzip -kd $file.gz
 	fi
 	ls -lart  $file
-	./prange.exe  -t$num  -w
+	./prange.exe  -t$num  -w  -g 36
 done

@@ -382,7 +382,7 @@ int main(int argc, char *argv[])
     if ( !dst ) { perror(name); dst = stdout; }
     /* --- Affichage séquentiel, dans l'ordre des v (comme la version série) --- */
     fprintf(dst, "\nUsing no %d  (threads: %d)\n", target, nbproc );
-    fprintf(dst, "\n#%zu members have NL_2=38 :\n", nsol);
+    fprintf(dst, "\n#%zu members have NL_2 >=%d :\n", nsol, goal);
     for (size_t i = 0; i < nsol; i++) {
         boole f = vectortoboole((vector) sol[i], &base);
         for (int x = 0; x < ffsize; x++) f[x] ^= h[x];

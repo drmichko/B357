@@ -22,7 +22,7 @@
     int goal = 38;
     int nbproc = 0;
     int optwrite = 0;
-    char *dirname = "../tools/data";
+    char *dirname = "./data";
     basis_t base;
     uint64_t total = 0, card;
 
@@ -118,10 +118,8 @@ int main(int argc, char *argv[])
     aglGroup grp = NULL;
     while ( ( h = loadaglboolesize(src, &grp, &grpSize) )){
 		item++;
-		if (  item < 179 ) 
+		if (  item == 179  ) 
 			total += doit( item, grpSize, h , grp );
-		else 
-			total += 12;
 		aglfreeGroup( grp );
 		free(h);
     }
