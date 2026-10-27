@@ -1,0 +1,688 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- macros ----------
+\newcommand{\F}{\mathbb{F}_2}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\NL}{\mathrm{NL}}
+\newcommand{\NQ}{\mathrm{NQ}}
+\newcommand{\NC}{\mathrm{NC}}
+\newcommand{\dist}{d}
+\newcommand{\Bc}{\mathcal{B}}
+\def\bst(#1,#2,#3){\mathcal{B}_{#1}^{#2}(#3)}
+\def\N(#1,#2){ {\rm NL}_{#1}(#2) }
+\def\AGL(#1,#2){ {\rm AGL}(#1,#2) }
+\def\agl#1{ {\mathfrak #1 }}
+\def\rmc(#1,#2){ {\rm rmc}(#1,#2) }
+\def\boole(#1){\mathcal{B}(#1)}
+\DeclareMathOperator{\degr}{deg}
+
+% ---------- theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{result}[theorem]{Numerical fact}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{corollary}[theorem]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Définition}
+\newtheorem{hypothesis}[theorem]{Hypothèse}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remarque}
+
+\title{Rayon de de recouvrement de $\rmc(2,8)$ et $\rmc(3,8)$}
+\author{Philippe Langevin\\
+{\small Département de Mathématiques, UFR Sciences et Techniques, Université de Toulon}\\[4pt]
+{\small Rapport de travail, rédigé avec l'assistance de Claude (Anthropic)}}
+\date{25 octobre 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Nous montrons comment obtenir et utiliser la classification de 
+$\bst(3,5,7)$ pour obtenir deux nouvelles majorations des codes
+de Reed-Muller d'ordre 2 et 3 en 8 variables.
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{Introduction}
+
+
+Le rayon de recouvrement $\rho(r, m)$ de $\rmc(r,m)$ est le maximum, sur les fonctions
+$f\in\boole(m)$, de la distance $\dist(f,\rmc(r,m))$, appelée non-linéarité d'ordre $r$ de $f$,
+nous la noton $\N(r,f)$. Tous les rayons de recouvrements sont connus pour $m\leq 7$,
+signalons que  la détermination de $\rho(1,9)$ vient d'être faite après 40 ans d'efforts,
+alors les deux premiers cas ouverts concernent les codes de Reed-Muller d'ordre 2 et
+et 3 en 8 variables :
+$$
+	88 \leq \rho(2,8) \leq 96, \qquad  56\leq \rho(3,8) \leq 60.
+$$
+Les majorations sont des conséquences d'inégalité de Plotkin
+$$\rho(k,m) \leq \rho(k,m-1) + \rho(k-1,m-1)$$
+en utilisant  la valeur  $\rho(1,7)=56$ \cite{MYK,HOU},  et les valeurs obtenues récement $\rho(2,7)=40$ \cite{Wang19} 
+et $\rho(3,7)=20$ \cite{GKLW}. L'objectif de cette note, est de monrer que les  majorations sont strictes. Pour cela,
+nous devons établir que les fonctions de non linéarité quadratique optimale sont cubique ou quartique. Tout d'abord
+en utilisant la classification de $\bst(3,4,7)$, nous trouvons 4 classes de fonctions de degré au plus 4
+à distance 40 du Reed-Muller d'ordre 2 :
+
+\begin{table}
+\centering
+\caption{\label{prop:4classes}
+Les $4$ classes de fonctions de $\bst(3,4,7)$ de non linéarité quadratique 
+ $40$ ; leurs degrés sont
+$4,4,3,4$. Les distributions de $\NL(f+q)$ sur les $2^{21}$ quadratiques homogènes $q$.
+}
+\begin{tabular}{lrrrr}
+\toprule
+classe & $\NL=40$ & $44$ & $48$ & $52$\\
+\midrule
+1 & 14\,336 & 290\,816 & 1\,598\,464 & 193\,536\\
+2 & 14\,336 & 290\,816 & 1\,589\,248 & 202\,752\\
+3 & 11\,264 & 307\,200 & 1\,768\,448 & 10\,240\\
+4 & 11\,264 & 307\,200 & 1\,670\,144 & 108\,544\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{result} Il  n'y a que 4 classes de fonctions de non linéarité quadratique 40,
+ce sont les fonctions de degré 3 et 4 énumérées dans la table \ref{prop:4classes}. 
+\end{result}
+\begin{proof}
+	La preuve numérique sera déroulée dans les sections qui suivent.
+\end{proof}
+
+\begin{proposition}
+	Les fonctions hautement non quadratiques de 7 bits sont dans $\rmc(4,7)$ et
+	nous avons $\rho(2,8) < 96$.
+\end{proposition}
+\begin{proof}
+	Considérons $f$ une fonction de $\boole(8)$ de non linéarité 96. L'inégalité de Plotkin
+	montre que $f = ( f_0 || f_1 )$ où $f_0$ et $f_1$ sont hautement non quadratique en 7
+	variables. La distribution des non linéarité d'ordre 1 de ces fonctions montre sur le
+	champs qu'une concaténation de deux fonctions hautement non quadratique est au plu égale
+	à 94.
+\end{proof}
+
+\begin{proposition}
+        Le rayon de recouvrement de \rmc(3,8) vérifie $\rho(3,8) < 60$.
+\end{proposition}
+\begin{proof}
+        En effet, si $f$ une fonction de $\boole(8)$ de non linéarité  cubique 60 alors
+	c'est la concaténation de deux fonctions de non linéarité cubique 20 dont les 
+	meilleures 3-approximation sont de non linéarité quadratique 40. Il s'ensuit que
+	$f\in\rmc(4,8)$ et on peut utiliser le résultat de \cite{GAO} qui affirme que
+        le rayon de recouvrement relatif $\rho_4(3,8) =  56$  pour conclure.
+\end{proof}
+
+
+\section{Classification}
+\label{sec:class}
+
+Deux fonctions Booléennes $f$ et $g$ de $\boole(m)$ sont dites $r$-équivalentes
+quand il existe une transformation affine $\agl s \in\AGL(2,m)$ tel que $\deg( g+f\circ \agl s) \leq r$. Le
+nombre de classe est déterminée par la formule de Burnside et la classification 
+de $\bst(s, t, m)$ s'obtient par descente à partir de $\bst(s+1, t, m)$.  Nous sommes
+partis des stabiliseurs des 179 classes  de $\bst(4,5,7)$ pour obtenir un système
+de représentants de $\bst(3,5,7)$.   Le stabiliseur
+de $f\in\bst(4,5,7)$ est le sous-groupe $S$ composés des  $\agl s$ tel que $\deg( f + f\circ \agl s ) \leq 3$.
+Les orbites de $\bst(3,5,7)$ 3-equivalentes à $f$ ss'obtiennent par l'action 
+$\bst(3,3,7)\ni c\mapsto  c\circ \agl s +( h + h\circ \agl s)$. Pour la réalisation, nous
+avons distingué deux situations : suivant l'ordre de $S$.
+
+La méthode de descente est décrite dans [VGPL],
+une description des  $118\,140\,881\,980\approx 2^{36.78}$ 
+classes est présentée dans la page du projet numérique \cite{PN}, sous la forme de 178 tableaux de $2^{29}$ bits, après 
+compression la donnée pèse moins d'un gigaoctet. 
+
+
+\begin{result}
+	Les quintiques de de $\boole(7)$ ne sont pas hautement quadratique.   
+\end{result}
+\begin{proof} On peut vérifier ce point en appliquant le décodage par symbole d'inforation de Prange.
+\end{proof}
+
+Nous avons déterminé les classes dont la non-linéarité
+quadratique vaut 38 en combinant un filtre basé sur l'algorithme de
+Prange avec une recherche explicite de leader.  Nous obtenons
+50 fonctions : X de degré 4 et Y dedegré 5.  Toutes ces
+fonctions définissent des orphelins du Reed-Muller d'ordre 2,
+il n'est pas possible d'augmenter la non linéarité 
+quadratique de ces fonctions en les modifiant en un point. 
+
+\begin{verbatim}
+num=1 class=10 deg=4 anf=abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg 
+num=2 class=10 deg=4 anf=abd+acd+bcd+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg 
+num=3 class=10 deg=4 anf=abc+abce+ade+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg 
+num=4 class=10 deg=4 anf=abd+bcd+ace+bce+abce+acde+bcdf+acef+bcef+adef+bdef+cdg+aeg+beg+afg 
+num=5 class=10 deg=4 anf=abd+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg 
+num=6 class=10 deg=4 anf=acd+abe+ace+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg 
+num=7 class=10 deg=4 anf=acd+abce+ade+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg 
+num=8 class=118 deg=5 anf=abc+acd+abde+adf+bdf+bcdf+aef+bef+abef+cef+abcef+adg+bdg+cdg+abcdg+beg+aceg+abfg 
+num=9 class=11 deg=4 anf=abc+ace+bce+bde+bcf+adf+abg+defg 
+num=10 class=11 deg=4 anf=cde+adf+bdf+bef+bdg+aeg+defg 
+num=11 class=134 deg=5 anf=abc+bcd+cde+bdf+acdf+aef+abef+abcef+adg+abcdg+abeg+ceg+cfg 
+num=12 class=135 deg=5 anf=abc+abe+bde+cde+acde+abdf+cdf+aef+abef+abcef+adg+abcdg+abeg+cfg 
+num=13 class=149 deg=5 anf=abc+abd+bcd+ade+abcde+bdf+cdef+acg+abeg+afg+bfg+cfg+bcfg+dfg+adfg+efg 
+num=14 class=159 deg=5 anf=abe+abcde+bcf+bdf+acdf+bcdf+cef+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg 
+num=15 class=159 deg=5 anf=abc+ace+ade+abcde+bcf+bdf+acdf+bcdf+cef+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg 
+num=16 class=159 deg=5 anf=abc+bcd+cde+abcde+acf+bcf+adf+acdf+bcdf+aef+bef+cef+bcef+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg 
+num=17 class=159 deg=5 anf=abc+abd+bde+abcde+acf+bcf+bdf+acdf+bcdf+aef+bef+cef+bcef+adg+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg 
+num=18 class=173 deg=5 anf=abd+acd+ace+abcde+bcf+adef+abcg+cdg+beg 
+num=19 class=173 deg=5 anf=abd+acd+ace+abcde+bcf+cdf+bef+def+adef+abcg+deg+afg 
+num=20 class=177 deg=5 anf=acd+bcd+bce+abcde+abcf+bdf+aef+abg+deg 
+num=21 class=177 deg=5 anf=acd+bcd+bce+abcde+abf+abcf+bdf+aef+abg+deg 
+num=22 class=177 deg=5 anf=abd+acd+ace+abcde+abcf+cdg+beg+afg 
+num=23 class=2 deg=4 anf=abc+abd+bcd+abcd+ace+bce+ade+bcde+bcf+adf+bdf+bef+cdef+bcg+abcg+adg+cdg+aeg+abfg+aefg+defg 
+num=24 class=3 deg=4 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+acf+bcf+aef+bef+bcef+cdef+acg+bcg+bdg+acfg+defg 
+num=25 class=3 deg=4 anf=abc+bcd+ace+ade+cde+bcde+acf+bcf+aef+bcef+cdef+bcg+adg+bdg+acfg+defg 
+num=26 class=3 deg=4 anf=abc+ace+bce+bde+cde+bcde+adf+bdf+aef+bcef+cdef+aeg+beg+acfg+defg 
+num=27 class=3 deg=4 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+aef+bef+bcef+cdef+acg+bcg+bfg+acfg+defg 
+num=28 class=4 deg=4 anf=abc+bcd+abe+ace+bce+bde+abf+abcf+adf+acef+cdef+bdg+bceg+bdfg+aefg+befg 
+num=29 class=4 deg=4 anf=bcd+ace+bde+abcf+adf+acef+cdef+abg+cdg+bceg+bdfg+aefg+befg 
+num=30 class=4 deg=4 anf=abc+abd+acd+abe+ace+ade+bde+bcf+abcf+adf+aef+acef+cdef+abg+cdg+bceg+bdfg+aefg+befg 
+num=31 class=4 deg=4 anf=bcd+ace+bce+abf+abcf+adf+bdf+acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg 
+num=32 class=4 deg=4 anf=bcd+ace+bce+acf+abcf+bdf+cdf+aef+acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg 
+num=33 class=5 deg=4 anf=abd+bcd+ace+bce+ade+bde+acde+abf+acf+abcf+bdf+cdf+bdef+bcdg+abeg+adfg+cefg 
+num=34 class=5 deg=4 anf=abd+bcd+abe+ace+bce+ade+bde+acde+abf+bcf+abcf+bdf+cdf+bdef+abg+bcdg+abeg+adfg+cefg 
+num=35 class=5 deg=4 anf=bce+ade+acde+abf+abcf+cdf+bdef+acg+bcdg+abeg+adfg+cefg 
+num=36 class=5 deg=4 anf=abd+acd+abe+bce+ade+cde+acde+abf+abcf+adf+bdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg 
+num=37 class=5 deg=4 anf=abd+acd+abe+ade+bde+acde+abf+bcf+abcf+adf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg 
+num=38 class=5 deg=4 anf=abd+bcd+abe+ade+bde+acde+abf+bcf+abcf+bdf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg 
+num=39 class=5 deg=4 anf=abc+acd+ace+bce+ade+bde+cde+acde+abf+acf+bcf+abcf+adf+bdf+aef+bef+bdef+acg+bdg+bcdg+abeg+adfg+cefg 
+num=40 class=5 deg=4 anf=abc+bcd+abe+bce+ade+cde+acde+abf+acf+bcf+abcf+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg 
+num=41 class=5 deg=4 anf=bce+acde+abcf+cdf+aef+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg 
+num=42 class=5 deg=4 anf=abd+acd+abe+bce+bde+cde+acde+abf+acf+bcf+abcf+adf+bdf+aef+bef+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg 
+num=43 class=6 deg=4 anf=acd+bcd+abe+bce+bde+cde+abf+acf+bcf+adf+aef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg 
+num=44 class=6 deg=4 anf=abd+ace+ade+bcf+bdf+cef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg 
+num=45 class=7 deg=4 anf=abc+abe+ace+ade+bde+abf+adf+cdf+bcg+adg+abeg+acfg+defg 
+num=46 class=7 deg=4 anf=abd+acd+bcd+abe+bde+cde+acf+adf+bdf+aef+bcg+adg+abeg+acfg+defg 
+num=47 class=7 deg=4 anf=abc+abe+ace+ade+bde+abf+adf+cdf+aef+bcg+adg+abeg+acfg+defg 
+num=48 class=8 deg=4 anf=acd+bcd+bce+abf+abcg+bdg+aeg+defg 
+num=49 class=91 deg=5 anf=abd+ace+bde+acf+bcf+adf+abcef+cdef+acg+adg+bdg+cdg+abcdg+aeg+aceg+bceg+deg+bdeg+afg+bfg+cfg+bcfg+dfg+adfg+efg 
+num=50 class=9 deg=4 anf=abc+acd+bce+cde+acf+bcf+bdf+abg+bcg+adg+bcfg+defg 
+\end{verbatim}
+
+
+
+\begin{proposition}[complétude]\label{prop:complet}
+si $f\in\Bc(7)$ vérifie $\NQ(f)=40$, alors $f$ est équivalente à l'une
+des $4$ classes ; en particulier $\degr g\le 4$.
+\end{proposition}
+\begin{proof}
+Il suffit de montrer que la non linéarité quadratique d'une
+fonction $f$ de degré 6 ne peut pas être 40. Pour cela, on considère une
+modification de $f$ en deux points $a$ et $b$ qui tue la partie de degré 
+6 tout en donnant un degré 5 : 
+$$
+	g(x) :=\delta_a(x) + \delta_b(x) +g(x)  = \sum_{i=1}^7 (a_i+b_i+c_i)  \widehat {x_i} + \sum_{i,j} (a_ia_j+b_ib_j + c_{ij} ) \widehat{x_{i,j}}+\ldots 
+$$
+La fonction $g$ est de degré 5, modifiée en deux points est de non quadricité 38, c'est
+contradictoire avec le fait que toutes les quintiques de non linéarité quadratique 38
+définissent des orphelins.
+\end{proof}
+
+
+
+ $\wt$ le poids de Hamming,
+$\dist(f,C)=\min_{c\in C}\wt(f+c)$. On écrit $f=(f_0\,|\,f_1)$ avec $f_0,f_1\in\Bc(n-1)$ les
+restrictions à $x_n=0$ et $x_n=1$, de sorte que $f(x,x_n)=f_0(x)+x_n(f_0+f_1)(x)$. Les
+variables $a,b,\dots,g$ des représentants de la section~\ref{sec:classes} correspondent
+à $x_1,\dots,x_7$.
+
+\paragraph{Non-linéarités.}
+Pour $g\in\Bc(7)$ : $\NL(g)=\dist(g,\rmc(1,7))$, $\NQ(g)=\dist(g,\rmc(2,7))$,
+$\NC(g)=\dist(g,\rmc(3,7))$. On a $\NL\le 56$, $\NQ\le 40$, $\NC\le 20$.
+Un \emph{leader} de $g$ (pour $\rmc(2,7)$) est un mot de poids minimal de $g+\rmc(2,7)$.
+
+\paragraph{Fonctions $\delta$.} $\delta_a$ est l'indicatrice du point $a$ ; en $n$ variables
+$\delta_a=\prod_j(x_j+a_j+1)$. Le coefficient du monôme $x^M$ dans $\delta_a$ vaut $1$ si et
+seulement si $\operatorname{supp}(a)\subseteq M$.
+
+\begin{lemma}[faits élémentaires]\label{lem:faits}
+\begin{enumerate}[label=(\alph*)]
+\item \emph{Parité.} Si $r<n$, tout mot de $\rmc(r,n)$ est de poids pair, donc
+ $\dist(f,\rmc(r,n))\equiv\wt(f)\pmod 2$. Le poids de $f$ a la parité du coefficient du monôme
+ $x_1\cdots x_n$ de $f$.
+\item \emph{Stabilité.} $|\dist(f+\delta_x,C)-\dist(f,C)|\le 1$ pour tout code $C$, et
+ $\dist(f,C)\le\dist(f+\delta_x+\delta_y,C)+2$.
+\item \emph{Invariance.} $\dist(f\circ A,\rmc(r,n))=\dist(f,\rmc(r,n))$ pour $A\in\mathrm{AGL}(n,2)$.
+ Le degré d'une fonction est invariant par $\mathrm{AGL}(n,2)$ et, s'il est $\ge 3$, par
+ addition d'un élément de $\rmc(2,n)$.
+\item \emph{Restrictions.} L'ANF de $f|_{x_i=0}$ est formée des monômes de $f$ qui ne
+ contiennent pas $x_i$.
+\item \emph{Deux points.} En $n$ variables, la partie de degré $n-1$ de $\delta_a+\delta_b$ est
+ $\sum_k(a_k+b_k)\,x_{[n]\setminus k}$, et $\delta_a+\delta_b$ est de degré $\le n-1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) $\rmc(r,n)$ est de poids pairs pour $r<n$ ; le poids de $f$ est la somme des valeurs de
+$f$, qui a la parité du coefficient dominant. (b) Inégalité triangulaire. (c) $\rmc(r,n)$ est
+stable par $\mathrm{AGL}(n,2)$. (d) Évident. (e) Le monôme $x_{[n]\setminus k}$ a pour
+coefficient $[a_k=0]+[b_k=0]=a_k+b_k$ ; le monôme $x_{[n]}$ a coefficient $1+1=0$.
+\end{proof}
+
+\begin{lemma}[décomposition]\label{lem:dec}
+Pour $f=(f_0\,|\,f_1)\in\Bc(n)$ et $2\le r<n$,
+\[
+\dist(f,\rmc(r,n))=\min_{u\in\rmc(r,n-1)}\bigl[\wt(f_0+u)+\dist(f_1+u,\rmc(r-1,n-1))\bigr].
+\]
+Le même résultat vaut avec les rôles de $f_0,f_1$ échangés (le code est invariant par la
+translation $x_n\mapsto x_n+1$).
+\end{lemma}
+\begin{proof}
+$\rmc(r,n)=\{(u\,|\,u+v):u\in\rmc(r,n-1),\,v\in\rmc(r-1,n-1)\}$ et
+$\wt(f_0+u)+\wt(f_1+u+v)$ est minimisé en $v$ par $\dist(f_1+u,\rmc(r-1,n-1))$.
+\end{proof}
+
+\begin{corollary}[formules à quadratiques et cubiques homogènes]\label{cor:formules}
+Soit $f=(f_0\,|\,f_1)$ avec $f_i\in\Bc(7)$.
+\begin{enumerate}[label=(\alph*)]
+\item $\dist(f,\rmc(2,8))=\min_q\bigl[\NL(f_0+q)+\NL(f_1+q)\bigr]$, $q$ parcourant les $2^{21}$
+ formes quadratiques homogènes.
+\item $\dist(f,\rmc(3,8))=\min_c\bigl[\NQ(f_0+c)+\NQ(f_1+c)\bigr]$, $c$ parcourant les $2^{35}$
+ formes cubiques homogènes.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+(a) On écrit $u=q+\ell$ avec $\ell$ affine ; le second terme du lemme~\ref{lem:dec} vaut
+$\NL(f_1+q)$ et ne dépend pas de $\ell$, tandis que $\min_\ell\wt(f_0+q+\ell)=\NL(f_0+q)$.
+(b) Même argument avec $u=c+p$, $p\in\rmc(2,7)$.
+\end{proof}
+
+\begin{definition}[urcoset]
+Une fonction $g\in\Bc(7)$ est un \emph{urcoset} si l'union des supports de ses leaders est
+$\F^7$. Si $\nu=\NQ(g)$, alors $\NQ(g+\delta_x)\in\{\nu-1,\nu+1\}$ (parité et lemme~\ref{lem:faits}(b)),
+et $\NQ(g+\delta_x)=\nu-1$ si et seulement si $x$ est dans le support d'un leader. Donc $g$ est
+un urcoset si et seulement si $\NQ(g+\delta_x)=\nu-1$ pour tout $x\in\F^7$.
+\end{definition}
+
+\begin{lemma}[invariance des distributions]\label{lem:distrib}
+Soit $g=f\circ A+p$ avec $A\in\mathrm{AGL}(7,2)$ et $p\in\rmc(2,7)$. Alors le multi-ensemble
+$\{\NL(g+q)\}_q$ ($q$ quadratique homogène) est égal à $\{\NL(f+q)\}_q$.
+\end{lemma}
+\begin{proof}
+$\NL(g+q)=\NL(f\circ A+p+q)=\NL(f+(p+q)\circ A^{-1})$ et
+$q\mapsto(p+q)\circ A^{-1}$ induit une bijection de $\rmc(2,7)/\rmc(1,7)$, identifié à
+l'ensemble des quadratiques homogènes. $\NL$ est invariante par ajout d'une fonction affine
+et par équivalence affine.
+\end{proof}
+
+% =====================================================================
+\section{Résultats de la littérature et données utilisées}\label{sec:hyp}
+
+\paragraph{Résultats publiés.}
+\begin{description}[leftmargin=1.2cm,style=nextline]
+\item[(R1)] $\rho(2,7)=40$ \cite{Wang19}.
+\item[(R2)] $\rho(3,7)=20$ \cite{GKLW}.
+\item[(R3)] Le rayon de recouvrement relatif de $\rmc(3,8)$ dans $\rmc(4,8)$ est $56$
+ \cite{Gao26} : pour tout $g\in\rmc(4,8)$, $\dist(g,\rmc(3,8))\le 56$, avec égalité atteinte.
+\end{description}
+
+\paragraph{Données de l'auteur (classifications calculées, non redémontrées ici).}
+\begin{description}[leftmargin=1.2cm,style=nextline]
+\item[(D1)] La classification de $B(3,5,7)=\rmc(5,7)/\rmc(2,7)$ sous $\mathrm{AGL}(7,2)$ fournit
+ exactement $4$ classes de fonctions de degré $\le 5$ avec $\NQ=40$ ; leurs représentants
+ sont donnés en annexe~\ref{app:reps}. Toute fonction de degré exactement $5$ vérifie $\NQ\le 38$.
+\item[(D2)] Les fonctions de degré $5$ avec $\NQ=38$ sont des urcosets.
+\item[(D3)] Les fonctions de $\Bc(7)$ avec $\NQ=39$ sont des fonctions de $\NQ=40$
+ (dans les $4$ classes) dont on a changé la valeur en un point.
+\item[(D4)] La classification de $B(4,4,8)=\rmc(4,8)/\rmc(3,8)$ : $998$ classes non nulles
+ (fichier \texttt{B-4-4-8.dat}, projet agl8 de Gillot et Langevin), plus la classe nulle.
+\item[(D5)] Une liste de $50$ représentants (ANF) d'urcosets de $B(3,5,7)$ : $3$ de
+ $\NQ=40$ (degré $4$) et $47$ de $\NQ=38$ (degrés $4$ et $5$).
+\end{description}
+
+\paragraph{Hypothèse supplémentaire, utilisée seulement pour le gain $94\to93$.}
+\begin{hypothesis}[H$^\ast$]\label{hyp:star}
+Tout urcoset de $\Bc(7)$ avec $\NQ=38$ est équivalent à l'un des $47$ représentants de (D5).
+\end{hypothesis}
+\noindent En particulier (H$^\ast$) exclut les urcosets de $\NQ=38$ de degré $6$, sur lesquels
+nous ne disposons pas d'information.
+
+% =====================================================================
+\section{Majoration de $\rho(2,8)$}\label{sec:rho28}
+
+\subsection{Trois lemmes}
+
+\begin{lemma}[déformations de $\NQ=38$]\label{lem:dich}
+Soit $h\in\Bc(7)$ avec $\NQ(h)=38$. Alors, sous (D3), l'une des deux situations a lieu :
+\begin{enumerate}[label=(\Alph*)]
+\item \emph{type B} : $h=s+\delta_x+\delta_y$ avec $s$ dans l'une des $4$ classes ; alors
+ $\NL(h+q)\le 54$ pour tout $q$ ;
+\item \emph{urcoset} : $h$ est un urcoset de $\NQ=38$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+$h$ est de poids pair, donc $\NQ(h+\delta_z)\in\{37,39\}$ pour tout $z$. Si l'un de ces
+voisins est de $\NQ=39$, (D3) donne $h+\delta_z=s+\delta_x$ avec $s$ de $\NQ=40$, d'où le
+type B ; $\NL(h+q)\le\NL(s+q)+2\le 52+2$ par la proposition~\ref{prop:4classes}. Sinon tous
+les voisins sont de $\NQ=37$ : $h$ est un urcoset.
+\end{proof}
+
+\begin{lemma}[données sur les urcosets de la liste]\label{lem:liste}
+Pour les $47$ représentants de $\NQ=38$ de (D5), calcul exhaustif sur les $q$ : tous sont des
+urcosets ; $\max_q\NL(h+q)\le 54$ pour $46$ d'entre eux ; la classe restante a
+$\max_q\NL(h+q)=56$, atteint pour exactement $64$ valeurs de $q$ ; le nombre de quadratiques
+leaders ($\NL(h+q)=38$) est $\ge 256$ pour chaque classe.
+\end{lemma}
+
+\begin{lemma}[choix d'un leader]\label{lem:choix}
+Soient $f_0,f_1\in\Bc(7)$ et $L(f_0)=\{q:\NL(f_0+q)=\NQ(f_0)\}$. Alors
+\[
+\dist((f_0\,|\,f_1),\rmc(2,8))\le\NQ(f_0)+\min_{q\in L(f_0)}\NL(f_1+q).
+\]
+\end{lemma}
+\begin{proof}
+Corollaire~\ref{cor:formules}(a).
+\end{proof}
+
+\subsection{Énoncé et démonstration}
+
+\begin{theorem}\label{thm:rho28}
+Sous (R1), (D1)--(D3) : $\dist(f,\rmc(2,8))\le 94$ pour tout $f\in\Bc(8)$, avec $\le 93$ si
+$\wt(f)$ est impair. Sous (H$^\ast$) en plus, $\dist(f,\rmc(2,8))\le 92$ si $\wt(f)$ est pair ;
+donc $\rho(2,8)\le 93$.
+\end{theorem}
+
+\begin{proof}
+On coupe selon une coordonnée : $f=(f_0\,|\,f_1)$. On utilise les bornes
+$\NL\le 56$ ; $\NL(s+q)\le 52$ si $s$ est dans une classe de $\NQ=40$ ; et, si $\NQ(h)=39$,
+$h=s+\delta_x$ (D3) donc $\NL(h+q)\le 53$.
+
+\emph{$f$ de poids impair.} Une moitié $e$ est de poids pair, l'autre $h$ de poids impair.
+\begin{itemize}[nosep]
+\item $\NQ(e)\le 38$ : lemme~\ref{lem:choix} avec $e$ en premier donne $\dist\le 38+56=94$ ;
+ comme $\dist$ est impair, $\dist\le 93$.
+\item $\NQ(e)=40$ et $\NQ(h)\le 37$ : $h$ en premier, $\dist\le 37+56=93$.
+\item $\NQ(e)=40$ et $\NQ(h)=39$ : $e$ en premier avec $q\in L(e)$, $\NL(h+q)\le 53$,
+ donc $\dist\le 40+53=93$.
+\end{itemize}
+($\NQ(h)$ est impair et $\le 39$ par (R1) ; $\NQ(e)\in\{40\}\cup\{\le 38\}$.)
+
+\emph{$f$ de poids pair, moitiés impaires.} $\NQ(f_i)$ est impair $\le 39$. Si l'une est
+$\le 37$, on la met en premier : $\dist\le 37+56=93$, donc $\le 92$ par parité. Si les deux
+valent $39$, $\dist\le 39+53=92$.
+
+\emph{$f$ de poids pair, moitiés paires.}
+\begin{itemize}[nosep]
+\item $\NQ(f_0)=\NQ(f_1)=40$ : $\dist\le 40+52=92$.
+\item $\NQ(f_0)\le 38$ et $\NQ(f_1)=40$ : $\dist\le 38+52=90$.
+\item $\NQ(f_0),\NQ(f_1)\le 38$. Si l'une est $\le 36$ : $\dist\le 36+56=92$. Sinon les deux
+ valent $38$. Si l'une est de type B (lemme~\ref{lem:dich}), on la prend en second :
+ $\dist\le 38+54=92$. Reste le cas de deux urcosets de $\NQ=38$ : la borne triviale est
+ $38+56=94$ ; sous (H$^\ast$) et le lemme~\ref{lem:liste}, si $f_1$ n'est pas dans la classe
+ exceptionnelle, $\NL(f_1+q)\le 54$ pour tout $q$, d'où $\dist\le 92$ ; si $f_1$ est dans la
+ classe exceptionnelle, au plus $64$ valeurs de $q$ donnent $\NL(f_1+q)=56$ alors que
+ $|L(f_0)|\ge 256$ (lemme~\ref{lem:distrib}), donc il existe $q\in L(f_0)$ avec
+ $\NL(f_1+q)\le 54$ et $\dist\le 92$.
+\end{itemize}
+Les poids pairs sont donc $\le 94$, et $\le 92$ sous (H$^\ast$) ; les poids impairs $\le 93$.
+\end{proof}
+
+\begin{remark}
+Sans (H$^\ast$), le seul cas qui plafonne à $94$ est celui de deux moitiés qui sont des
+urcosets de $\NQ=38$ hors de la liste, c'est-à-dire, d'après nos données, de degré $6$.
+Les fonctions de degré $6$ de $\NQ=38$ sont des déformations en deux points de fonctions de
+degré $\le 5$ de $\NQ\in\{36,38\}$ (même argument que la proposition~\ref{prop:complet}) ;
+leur étude demande la classification de $B(3,5,7)$ restreinte aux $\NQ\ge 36$.
+\end{remark}
+
+% =====================================================================
+\section{Encadrement de $\rho(3,8)$}\label{sec:rho38}
+
+\subsection{La distance $60$ impose le degré $4$}
+
+\begin{proposition}\label{prop:60}
+Sous (R1), (R2), (D1), (D2) : si $\dist(f,\rmc(3,8))=60$ alors $f\in\rmc(4,8)$.
+\end{proposition}
+\begin{proof}
+Coupons selon une coordonnée. Par le lemme~\ref{lem:dec},
+$60=\dist(f)=\min_u[\wt(f_0+u)+\NQ(f_1+u)]$, $u\in\rmc(3,7)$. Soit $u^\ast$ un leader de
+$f_0$ : $\wt(f_0+u^\ast)=\NC(f_0)\le 20$ (R2) et $\NQ(f_1+u^\ast)\le 40$ (R1). Donc
+$60\le\NC(f_0)+\NQ(f_1+u^\ast)\le 60$, d'où $\NQ(f_1+u^\ast)=40$. Par la proposition~\ref{prop:complet},
+$\degr(f_1+u^\ast)\le 4$, donc $\degr f_1\le 4$ car $\degr u^\ast\le 3$. Par symétrie
+(lemme~\ref{lem:dec}, rôles échangés), $\degr f_0\le 4$.
+Ceci vaut pour chaque coordonnée $x_i$. Par le lemme~\ref{lem:faits}(d), un monôme de degré
+$\ge 5$ de $f$ omettant $x_i$ apparaît dans $f|_{x_i=0}$, de degré $\le 4$ : impossible. Tout
+monôme de degré $5,6,7$ omet une variable, donc $f$ n'en a pas. Enfin le coefficient $c_7$ de
+$x_1\cdots x_7$ dans $f|_{x_8=0}$ et $c_7+c_8$ dans $f|_{x_8=1}$ sont nuls, d'où $c_8=0$.
+\end{proof}
+
+\subsection{La distance $59$ est impossible}
+
+\begin{proposition}\label{prop:59}
+Sous (R1)--(R3), (D1), (D2) : il n'existe pas de $f\in\Bc(8)$ avec $\dist(f,\rmc(3,8))=59$.
+\end{proposition}
+\begin{proof}
+Supposons $\dist(f,\rmc(3,8))=59$ ; $\wt(f)$ est impair. Pour chaque coordonnée $i$ et chaque
+valeur $\varepsilon_i$, les deux restrictions sont de poids de parités opposées. Notons
+$e_i$ la restriction paire et $h_i$ l'impaire.
+Par le lemme~\ref{lem:dec} avec $h_i$ en premier, pour un leader $u$ de $h_i$ :
+$\wt(h_i+u)$ est impair et $\le\rho(3,7)=20$, donc $\le 19$, et $\NQ(e_i+u)\le 40$ ; alors
+$59\le 19+40$, d'où $\NQ(e_i+u)=40$ et (proposition~\ref{prop:complet}) $\degr e_i\le 4$.
+
+Choisissons $\varepsilon_i$ tel que la moitié paire de la coupure selon $x_i$ soit
+$f|_{x_i=\varepsilon_i}$, et posons $f'(x)=f(x+\varepsilon)$ ; $\dist(f',\rmc(3,8))=59$ et
+$f'|_{x_i=0}$ est de poids pair, donc de degré $\le 4$, pour tout $i$. Comme dans la
+proposition~\ref{prop:60}, $f'$ n'a aucun monôme de degré $5,6,7$. Son poids est impair, donc
+le coefficient de $x_1\cdots x_8$ est $1$ (lemme~\ref{lem:faits}(a)) et
+$f'=\prod_ix_i+g=\delta_{(1,\dots,1)}+g$ avec $\degr g\le 4$. Par (R3),
+$\dist(g,\rmc(3,8))\le 56$, donc $\dist(f',\rmc(3,8))\le 57<59$ : contradiction.
+\end{proof}
+
+\subsection{Énoncé}
+
+\begin{theorem}\label{thm:rho38}
+Sous les hypothèses (R1)--(R3), (D1)--(D3) : $56\le\rho(3,8)\le 58$. Plus précisément~:
+\begin{itemize}[nosep]
+\item $\dist(f,\rmc(3,8))\le 56$ si $f\in\rmc(4,8)$ \textup{(R3)} ;
+\item $\dist(f,\rmc(3,8))\le 57$ si $\wt(f)$ est impair ;
+\item $\dist(f,\rmc(3,8))\le 58$ si $\wt(f)$ est pair.
+\end{itemize}
+\end{theorem}
+\begin{proof}
+La borne inférieure est (R3). Par la récursion, $\dist\le 60$. Les propositions~\ref{prop:60}
+et~\ref{prop:59} et (R3) excluent $60$ et $59$. Par parité (lemme~\ref{lem:faits}(a)),
+les poids impairs ont $\dist$ impaire donc $\le 57$, et les poids pairs ont $\dist$ paire
+$\le 58$.
+\end{proof}
+
+\subsection{Certificats explicites sur $B(4,4,8)$}\label{sec:cert}
+
+Indépendamment de (R3), nous avons cherché, pour chacune des $998$ classes non nulles de
+(D4), un mot de $\rmc(3,8)$ proche. Les mots sont de la forme
+$w=(c+q_0+\ell_0\,|\,c+q_1+\ell_1)$ avec $c$ cubique homogène et $q_i,\ell_i$ quadratique et
+affine : $w\in\rmc(3,8)$ car $(c+q_0+\ell_0)+(c+q_1+\ell_1)\in\rmc(2,7)$.
+Pour chaque classe, nous avons construit $w$ explicitement en $256$ bits, vérifié $\degr w\le 3$
+par transformée de Möbius et vérifié que $\wt(f+w)$ est la valeur annoncée.
+Aucune vérification n'a échoué. Résultat (distance certifiée, majorant) :
+\begin{center}
+\begin{tabular}{rrrrrrrrr}
+\toprule
+$\le 42$ & 44 & 46 & 48 & 50 & 52 & 54 & 56 & 58\\
+\midrule
+57 & 49 & 58 & 153 & 171 & 226 & 196 & 72 & 16\\
+\bottomrule
+\end{tabular}
+\end{center}
+Ces nombres sont des majorants fournis par une recherche locale : ils sont compatibles
+avec (R3) (qui implique que les $16$ classes à $58$ sont en réalité $\le 56$), mais ne le
+démontrent pas ; la recherche locale n'est pas optimale (une classe a demandé $4000$
+redémarrages pour passer de $60$ à $56$). Ces certificats suffisent seuls pour exclure la
+distance $60$ sur $\rmc(4,8)$ mais pas $59$ (il faut alors $\dist(g)\le 57$ pour
+$\dist(g+\delta)\le 58$ ; (R3) est donc nécessaire).
+
+% =====================================================================
+\section{Le cas ouvert : $f$ de poids pair à distance $58$}\label{sec:ouvert}
+
+Soit $f\in\Bc(8)\setminus\rmc(4,8)$ de poids pair avec $\dist(f,\rmc(3,8))=58$. On coupe selon
+une coordonnée (ou un hyperplan quelconque).
+
+\subsection{Conditions nécessaires}
+Notons $m_i=\NC(f_i)$ et $u$ un leader de $f_0$.
+\begin{itemize}[nosep]
+\item \emph{Moitiés paires} : $58\le m_0+\NQ(f_1+u)\le m_0+40$, donc $m_0\in\{18,20\}$ avec
+ $\NQ(f_1+u)=40$ si $m_0=18$, et $\NQ(f_1+u)\in\{38,40\}$ si $m_0=20$ ; idem avec les rôles
+ échangés.
+\item \emph{Moitiés impaires} : $m_0\le 19$, $\NQ(f_1+u)\le 39$, donc $m_0=19$ et
+ $\NQ(f_1+u)=39$ pour tout leader $u$ de $f_0$ ; idem pour $f_1$.
+\end{itemize}
+
+\subsection{Parité des coupures}
+\begin{lemma}\label{lem:parite}
+Pour $f\in\Bc(8)$ de poids pair, soit $w\in\F^8$ défini par $w_k=\sum_x f(x)x_k$ ($\bmod\,2$).
+Pour une forme linéaire $\ell=\lambda\cdot x$, la restriction de $f$ à $\{\ell=0\}$ est de
+poids de parité $\lambda\cdot w$. De plus $w\ne 0$ si et seulement si $\degr f=7$, et alors il
+existe une base $\ell_1,\dots,\ell_8$ de formes linéaires avec $\lambda_k\cdot w=1$ pour tout $k$.
+\end{lemma}
+\begin{proof}
+$\sum_{\ell(x)=0}f(x)=\sum_xf(x)(1+\ell(x))=\wt(f)+\lambda\cdot w=\lambda\cdot w$. Pour une
+coordonnée $x_k$, $w_k$ est la parité de $\wt(f|_{x_k=1})$, égale au coefficient de $x_{[8]\setminus k}$
+(le coefficient de $x_{[8]}$ est nul). Enfin l'hyperplan affine $\{\lambda:\lambda\cdot w=1\}$ de
+$\F^8$ engendre $\F^8$ s'il ne passe pas par l'origine, donc contient une base.
+\end{proof}
+
+Ainsi : si $\degr f\le 6$, toutes les coupures donnent deux moitiés paires ; si $\degr f=7$,
+on peut choisir des coordonnées où toutes les coupures coordonnées donnent deux moitiés impaires.
+
+\subsection{Le cas $\degr f=7$}
+\begin{proposition}\label{prop:deg7}
+Sous (R1), (R2), (D1)--(D3) : si $\degr f=7$ et $\dist(f,\rmc(3,8))=58$, il existe $a\in\F^8$
+tel que, à équivalence affine près, $f=G+\delta_a+\delta_{\bar a}$ avec $G\in\rmc(4,8)$,
+$\bar a=a+(1,\dots,1)$. De plus $\dist(G,\rmc(3,8))=56$, tous les leaders de
+$G+\rmc(3,8)$ (mots de poids $56$) s'annulent en $a$ et $\bar a$, et aucun mot de poids $58$ de
+$G+\rmc(3,8)$ ne vaut $1$ en $a$ et en $\bar a$ simultanément.
+\end{proposition}
+\begin{proof}
+Par le lemme~\ref{lem:parite}, choisissons des coordonnées où toutes les coupures
+coordonnées sont à moitiés impaires. Pour une coupure $j$, le leader $u$ de $f_0$ vérifie
+$\NQ(f_1+u)=39$, donc (D3) $f_1+u=s+\delta_x$ avec $\degr s\le 4$, d'où
+$f_1=\tilde g_1+\delta_x$ avec $\degr\tilde g_1\le 4$ ; de même $f_0=\tilde g_0+\delta_y$.
+Donc $f=G^{(j)}+\delta_{a_j}+\delta_{b_j}$ avec $G^{(j)}$ de moitiés de degré $\le 4$, donc de
+degré $\le 5$ avec tous ses monômes de degré $5$ contenant $x_j$ ; $a_j,b_j$ diffèrent en la
+coordonnée $j$.
+Les parties de degré $\ge 6$ de $f$ et de $\delta_{a_j}+\delta_{b_j}$ coïncident. Par le
+lemme~\ref{lem:faits}(e), la partie de degré $7$ donne $\{k:(a_j)_k\ne(b_j)_k\}$,
+indépendant de $j$ et contenant $j$ : c'est $[8]$, donc $b_j=\bar a_j$. Le coefficient du
+monôme de degré $6$ omettant $\{k,l\}$ est $[(a_j)_k=(a_j)_l=0]+[(a_j)_k=(a_j)_l=1]=[(a_j)_k=(a_j)_l]$,
+qui détermine $a_j$ à complément près : la paire $\{a_j,\bar a_j\}=\{a,\bar a\}$ est donc la même
+pour tout $j$. Ainsi $G^{(j)}=f+\delta_a+\delta_{\bar a}=:G$ ne dépend pas de $j$ ; ses monômes
+de degré $5$ contiendraient toutes les variables, donc il n'y en a pas : $G\in\rmc(4,8)$.
+Enfin $58=\dist(f)\le\dist(G)+2\le 58$ (R3), d'où $\dist(G)=56$, et pour $e\in G+\rmc(3,8)$ de poids $56$,
+$\wt(e+\delta_a+\delta_{\bar a})=56+(1-2e(a))+(1-2e(\bar a))\ge 58$ impose $e(a)=e(\bar a)=0$ ;
+la condition sur les poids $58$ est analogue.
+\end{proof}
+
+\begin{corollary}[critère de fermeture du cas $\degr f=7$]\label{cor:urc}
+Si tout coset de $\rmc(4,8)/\rmc(3,8)$ à distance $56$ de $\rmc(3,8)$ est un urcoset (l'union
+des supports de ses leaders est $\F^8$), alors aucune $f$ de degré $7$ n'est à distance $58$ de
+$\rmc(3,8)$.
+\end{corollary}
+
+\noindent \textbf{Statut.} Le critère du corollaire~\ref{cor:urc} n'est \emph{pas} vérifié.
+Nous avons tenté de le tester en cherchant des mots de poids $56$ de classes de la
+base (D4) : la recherche locale ne trouve que très rarement de tels mots (un mot pour
+$1500$ redémarrages sur la classe $4$, aucun sur les $3$ premières), ce qui ne permet pas
+d'estimer le recouvrement. Une connaissance des orbites qui atteignent $56$
+(liste de \cite{Gao26} ou de agl8) est nécessaire.
+
+\subsection{Le cas $\degr f\le 6$}
+Toutes les coupures sont à moitiés paires. Il faut contrôler $\NC(f_i)\in\{18,20\}$ et les
+leaders de $f_0$ ; les $f_1+u$ de $\NQ=38$ peuvent être de degré $6$, pour lesquels nous n'avons
+aucune donnée. Ce cas est \emph{entièrement ouvert}.
+
+% =====================================================================
+\section{Méthodes de calcul}\label{sec:calc}
+
+Variables $a,\dots,h\leftrightarrow x_1,\dots,x_8$ (bits $0$ à $7$). Les calculs sont en C,
+compilés avec \texttt{gcc -O3}.
+
+\paragraph{$\NQ$ et distributions.} Pour $g\in\Bc(7)$, les $2^{21}$ quadratiques homogènes sont
+énumérées par code de Gray (un XOR de $128$ bits par pas) ; pour chacune, une transformée de
+Walsh--Hadamard rapide sur $128$ points donne $\max_a|W_{g+q}(a)|$ et
+$\NL(g+q)=64-\max_a|W|/2$. Alors $\NQ(g)=\min_q\NL(g+q)$ et la distribution de $\NL(g+q)$
+est l'histogramme. Les leaders de $g$ sont les mots $g+q+a\cdot x+c$ avec $\NL(g+q)=\NQ(g)$,
+$|W(a)|$ maximal et $c=[W(a)<0]$ ; l'union de leurs supports teste la propriété d'urcoset.
+
+\paragraph{Certificats pour $\rmc(3,8)$.} Pour une forme quartique $F$ de $B(4,4,8)$, on écrit
+$F=(f_0\,|\,f_1)$ et on minimise $T(c)=\NQ^{\mathrm{ub}}(f_0+c)+\NQ^{\mathrm{ub}}(f_1+c)$ sur
+les cubiques homogènes $c$ par descente locale (voisinage : les $35$ monômes de degré $3$) avec
+redémarrages aléatoires. $\NQ^{\mathrm{ub}}$ est un majorant de $\NQ$ obtenu par descente sur
+les $21$ coefficients quadratiques depuis $6$ points de départ (sans recours à (R1)). Le mot
+$w\in\rmc(3,8)$ associé est reconstruit explicitement et vérifié.
+
+\paragraph{Reproductibilité.} Les résultats des sections~\ref{sec:classes}
+et~\ref{sec:cert} reposent sur ces programmes appliqués aux ANF de l'annexe et au fichier
+\texttt{B-4-4-8.dat}. Les programmes ne sont pas joints à ce rapport.
+
+% =====================================================================
+\section{Limites et points à vérifier}\label{sec:limites}
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Données de l'auteur.} (D1)--(D5) ne sont pas redémontrées. Nous avons seulement
+ recalculé, pour les $4$ représentants, $\NQ=40$, les degrés et les distributions, et, pour la
+ liste (D5), $\NQ$, le degré, la propriété d'urcoset et les distributions. L'exhaustivité des
+ classes de $\NQ=40$ est utilisée dans les propositions~\ref{prop:complet}, \ref{prop:60}
+ et~\ref{prop:59}.
+\item \textbf{Propriété (D3).} « $\NQ=39$ implique déformation en un point d'une fonction de
+ $\NQ=40$ » est une propriété donnée par l'auteur ; nous ne l'avons pas vérifiée. Elle sert dans le
+ théorème~\ref{thm:rho28} (poids impairs, moitiés de $\NQ=39$) et dans la
+ proposition~\ref{prop:deg7}. La proposition~\ref{prop:59} et le théorème~\ref{thm:rho38}
+ ne l'utilisent pas.
+\item \textbf{Hypothèse (H$^\ast$).} Elle est nécessaire pour $\rho(2,8)\le 93$ ; sans elle,
+ $\rho(2,8)\le 94$. Aucune donnée sur les urcosets de $\NQ=38$ de degré $6$.
+\item \textbf{(R3).} Le théorème de Gao est utilisé tel quel. Nos certificats ne le
+ retrouvent que par majoration $\le 58$.
+\item \textbf{Cas ouverts.} $\dist=58$ pour $f$ pair, hors de $\rmc(4,8)$, de degré $7$ (critère
+ du corollaire~\ref{cor:urc}) ou $\le 6$.
+\item \textbf{Bibliographie.} Nous n'avons pas consulté de preuve de (R1)--(R3) au-delà des
+ résumés ; les références doivent être vérifiées avant publication.
+\end{enumerate}
+
+% =====================================================================
+\appendix
+\section{Représentants des $4$ classes de $\NQ=40$}\label{app:reps}
+
+Variables $a,\dots,g=x_1,\dots,x_7$. Les ANF ci-dessous sont celles données par l'auteur.
+\begin{enumerate}[label=\arabic*.]
+\item \texttt{abd+ace+ade+bcf+bdf+cef+abg+abcg+adg+bdg+abdg+aceg+fg+bcfg+defg} \quad (degré $4$)
+\item \texttt{bcd+ace+bce+acf+abcf+bdf+cdf+aef+acef+cdef+abg+bdg+bceg+deg+fg+bdfg+aefg+befg} \quad (degré $4$)
+\item \texttt{acd+bcd+ace+adf+abg+bdg+deg+fg} \quad (degré $3$)
+\item \texttt{cde+adf+bdf+bef+bdg+aeg+fg+defg} \quad (degré $4$)
+\end{enumerate}
+Trois des représentants de $\NQ=40$ de la liste (D5) ont les mêmes distributions que les
+classes $1$, $2$ et $4$.
+
+% =====================================================================
+\begin{thebibliography}{99}
+\bibitem{Wang19} Q.~Wang, \emph{The covering radius of the Reed--Muller code $\mathrm{rmc}(2,7)$ is 40},
+ Discrete Math. \textbf{342}(12), 111625, 2019.
+\bibitem{GKLW} J.~Gao, H.~Kan, Y.~Li, Q.~Wang, \emph{The covering radius of the third-order
+ Reed--Muller code $\mathrm{rmc}(3,7)$ is 20}, arXiv:2206.10881.
+\bibitem{Gao26} J.~Gao, \emph{Numerical results and asymptotic lower bound on the covering
+ radius of Reed--Muller codes $\mathrm{rmc}(2,11)$ and $\mathrm{rmc}(3,n)$}, IEICE Trans.
+ Fundamentals \textbf{E109-A}(1), 35--46, 2026.
+\bibitem{DMT22} R.~Dougherty, R.~D.~Mauldin, M.~Tiefenbruck, \emph{The covering radius of the
+ Reed--Muller code $\mathrm{rmc}(m-4,m)$ in $\mathrm{rmc}(m-3,m)$}, IEEE Trans. Inform. Theory
+ \textbf{68}(1), 560--571, 2022.
+\bibitem{GL23} V.~Gillot, P.~Langevin, \emph{Covering radius of $\mathrm{rmc}(4,8)$},
+ arXiv:2305.03493, 2023 ; projet agl8, \texttt{langevin.univ-tln.fr/project/agl8}.
+\bibitem{LL05} P.~Langevin, G.~Leander, \emph{Classification of Boolean quartic forms in eight
+ variables}, in \emph{Boolean Functions in Cryptology and Information Security}, NATO Sci.
+ Peace Secur. Ser. D \textbf{18}, 139--147, 2005.
+\bibitem{Hou96} X.-D.~Hou, \emph{$GL(m,2)$ acting on $R(r,m)/R(r-1,m)$}, Discrete Math.
+ \textbf{149}, 99--122, 1996.
+\bibitem{CL92} G.~Cohen, S.~Litsyn, \emph{On the covering radius of Reed--Muller codes},
+ Discrete Math., 1992, doi:10.1016/0012-365X(92)90542-N.
+\end{thebibliography}
+
+\end{document}
