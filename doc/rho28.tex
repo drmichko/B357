@@ -150,13 +150,27 @@ compression la donnée pèse moins d'un gigaoctet.
 \begin{proof} On peut vérifier ce point en appliquant le décodage par symbole d'inforation de Prange.
 \end{proof}
 
+
+Les mots de poids mininum du translaté de $f+\rmc(r,m)$ sont
+les leaders associés à $f$. Convenons de dire que $f$ définit
+un orphelin ou urcosets quand l'union des supports des leaders 
+de $f$ est égal à $\fd(m)$. Un résultat fondamental de \cite{BRUALDI}
+affirme que si $f$ définit un orphelin alors, pour tout $a\in\fd(m)$.
+$\NL(r,f) = \NL(r,f+\delta_a)$.
+
 Nous avons déterminé les classes dont la non-linéarité
-quadratique vaut 38 en combinant un filtre basé sur l'algorithme de
+quadratique est supérieure ou égale à 38 en combinant un 
+filtre basé sur l'algorithme de
 Prange avec une recherche explicite de leader.  Nous obtenons
-50 fonctions : X de degré 4 et Y dedegré 5.  Toutes ces
-fonctions définissent des orphelins du Reed-Muller d'ordre 2,
-il n'est pas possible d'augmenter la non linéarité 
-quadratique de ces fonctions en les modifiant en un point. 
+51 fonctions : 1 cubique,  36 quartique et 14 quintique.  
+
+
+\begin{result}
+Les 51 classes de non linéarité quadrqtique supérieure ou égale
+à 38 fonctions définissent des orphelins du Reed-Muller d'ordre 2.
+	Une modification ponctuelle de ces fonctions diminue 
+	leur distance au Reed-Muller d'ordre 2.
+\end{result}
 
 \begin{verbatim}
 num=1 class=10 deg=4 anf=abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg 
