@@ -20,6 +20,7 @@
 177 anf=acd+bcd+bce+abcde+abcf+bdf+aef+abg+deg
 177 anf=acd+bcd+bce+abcde+abf+abcf+bdf+aef+abg+deg
 177 anf=abd+acd+ace+abcde+abcf+cdg+beg+afg
+179 anf=ace+bce+bde+bcf+adf+abg
 2 anf=abc+abd+bcd+abcd+ace+bce+ade+bcde+bcf+adf+bdf+bef+cdef+bcg+abcg+adg+cdg+aeg+abfg+aefg+defg
 3 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+acf+bcf+aef+bef+bcef+cdef+acg+bcg+bdg+acfg+defg
 3 anf=abc+bcd+ace+ade+cde+bcde+acf+bcf+aef+bcef+cdef+bcg+adg+bdg+acfg+defg
