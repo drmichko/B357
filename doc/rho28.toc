@@ -1,28 +1,3 @@
 \babel@toc {french}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Classification}{2}{section.2}%
-\contentsline {paragraph}{Non-linéarités.}{4}{section*.2}%
-\contentsline {paragraph}{Fonctions $\delta $.}{4}{section*.3}%
-\contentsline {section}{\numberline {3}Résultats de la littérature et données utilisées}{5}{section.3}%
-\contentsline {paragraph}{Résultats publiés.}{5}{section*.4}%
-\contentsline {paragraph}{Données de l'auteur (classifications calculées, non redémontrées ici).}{5}{section*.5}%
-\contentsline {paragraph}{Hypothèse supplémentaire, utilisée seulement pour le gain $94\to 93$.}{6}{section*.6}%
-\contentsline {section}{\numberline {4}Majoration de $\rho (2,8)$}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Trois lemmes}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Énoncé et démonstration}{6}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Encadrement de $\rho (3,8)$}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}La distance $60$ impose le degré $4$}{7}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}La distance $59$ est impossible}{7}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Énoncé}{7}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Certificats explicites sur $B(4,4,8)$}{8}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Le cas ouvert : $f$ de poids pair à distance $58$}{8}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Conditions nécessaires}{8}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Parité des coupures}{8}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Le cas $\degr f=7$}{9}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Le cas $\degr f\le 6$}{9}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Méthodes de calcul}{9}{section.7}%
-\contentsline {paragraph}{$\mathrm {NQ}$ et distributions.}{9}{section*.7}%
-\contentsline {paragraph}{Certificats pour $ {\rm rmc}(3,8) $.}{9}{section*.8}%
-\contentsline {paragraph}{Reproductibilité.}{10}{section*.9}%
-\contentsline {section}{\numberline {8}Limites et points à vérifier}{10}{section.8}%
-\contentsline {section}{\numberline {A}Représentants des $4$ classes de $\mathrm {NQ}=40$}{10}{appendix.A}%

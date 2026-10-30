@@ -1,0 +1,324 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,enumitem}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[table]{xcolor}
+\definecolor{plotkin}{RGB}{255,200,120}   % borne atteinte, cas non trivial
+\definecolor{trivial}{RGB}{225,225,225}   % borne atteinte, cas trivial r=m-1
+
+
+% ---------- macros ----------
+\newcommand{\F}{\mathbb{F}_2}
+\newcommand{\wt}{\mathrm{wt}}
+\newcommand{\Nl}{\mathrm{NL}}
+\newcommand{\NQ}{\mathrm{NQ}}
+\newcommand{\NC}{\mathrm{NC}}
+\newcommand{\dist}{d}
+\newcommand{\Bc}{\mathcal{B}}
+\def\bst(#1,#2,#3){\mathcal{B}_{#1}^{#2}(#3)}
+\def\clst(#1,#2,#3){\tilde{\mathcal{B}}_{#1}^{#2}(#3)}
+\def\NL(#1,#2){ {\rm NL}_{#1}(#2) }
+\def\AGL(#1,#2){ {\rm AGL}(#1,#2) }
+\def\agl#1{ {\mathfrak #1 }}
+\def\rmc(#1,#2){ \textsc {rm}(#1,#2) }
+\def\boole(#1){\mathcal{B}(#1)}
+\def\fd(#1){\mathcal{F}_2^{#1}}
+
+% ---------- theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Théorème}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{result}[theorem]{Numerical fact}
+\newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{coro}[theorem]{Corollaire}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Définition}
+\newtheorem{hypothesis}[theorem]{Hypothèse}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remarque}
+
+\title{majoration de  $\rmc(2,8)$ et $\rmc(3,8)$}
+\author{Valérie Gillot, Philippe Langevin, Jean-Baptiste Nguyen\\
+{\small IMATH, Université de Toulon}\\[4pt]
+{\small Rapport de travail, rédigé avec l'assistance de Claude (Anthropic)}}
+\date{Automne 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Nous montrons comment obtenir et utiliser la classification de 
+$\bst(3,5,7)$ pour obtenir deux nouvelles majorations des codes
+de Reed-Muller d'ordre 2 et 3 en 8 variables.
+\end{abstract}
+
+\section{Introduction}
+
+
+Le rayon de recouvrement $\rho(r, m)$ de $\rmc(r,m)$ est le maximum, sur les fonctions
+$f\in\boole(m)$, de la distance $\dist(f,\rmc(r,m))$, appelée non-linéarité d'ordre $r$ de $f$,
+nous la noton $\NL(r,f)$. Tous les rayons de recouvrements sont connus pour $m\leq 7$,
+signalons que  la détermination de $\rho(1,9)$ vient d'être faite après 40 ans d'efforts,
+alors les deux premiers cas ouverts concernent les codes de Reed-Muller d'ordre 2 et
+et 3 en 8 variables :
+$$
+	88 \leq \rho(2,8) \leq 96, \qquad  56\leq \rho(3,8) \leq 60.
+$$
+
+
+\begin{table}
+        \center
+        \caption{$\rho(r,m)$, inclut 10 cas non trivaux de Plotkin-extrèmale.}
+        \label{tab:tab_rho}
+        \begin{tabular}{c|ccccccccc}
+                $r\backslash m$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+                \hline
+                1 & 2 & \cellcolor{plotkin}6 & 12 & \cellcolor{plotkin}28 & 56 & \cellcolor{plotkin}120 & 243 & 496 & 996 \\
+                2 & \cellcolor{trivial}1 & 2 & 6 & \cellcolor{plotkin}18 & 40 & 88-96 & 196-216 & 400-460 & 856-956 \\
+                3 & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}8 & 20 & 56-60 & 111-156 & 194-372 & 454-832 \\
+                4 &  & 0 & \cellcolor{trivial}1 & 2 & 8 & 26 & 58-86 & $\leq$ 242 & $\leq$ 614 \\
+                5 &  &  & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}10 & 28-36 & $\leq$ 122 & $\leq$ 364 \\
+                6 &  &  &  & 0 & \cellcolor{trivial}1 & 2 & 10 & $\leq$ 46 & $\leq$ 168 \\
+                7 &  &  &  &  & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}12 & $\leq$ 58 \\
+                8 &  &  &  &  &  & 0 & \cellcolor{trivial}1 & 2 & 12 \\
+                \hline
+        \end{tabular}
+\end{table}
+
+Les majorations sont des conséquences d'inégalité de Plotkin
+$$\rho(r,m) \leq \rho(r,m-1) + \rho(r-1,m-1).$$
+
+
+Dans cette note, nous nous interessons à l'existence des
+fonctions Plotkin-extrèmale dont la  non linéarité d'ordre $r$ 
+atteignent la majoration de Plotkin i.e. $\NL(r,m) = \rho(r,m-1) + \rho(r-1,m-1)$.
+Une fonctionn de $\boole(m)$  s'écrit $f=g+x_m h$ où les
+fonction $g$ et $h$ sont des fonctions de $m$ variables, et
+la table de vérité de $(f)$ est la concaténation $( f_0 || f_1 )$
+des restrictions  $f_0:= h$, $f_1:=g+h$.
+
+Avec ces notations, pour une meilleure approximation de $f_0$
+$$
+	\wt( f + q  ) = \wt( f_0 +q_0 ) + \wt( f_1 +q_1) \leq \NL(r,m-1) + \wt( f_1 +q_1) 
+	\leq \NL(r,m-1) + \NL(r-1, f_1 + q_1 ) 
+$$
+
+Soit $g\in\mathrm{rm}(r-1,m-1)$ telle que $d(f_1+q_0,g)=NL_{r-1}(f_1+q_0)$.
+Par la construction $(u\,\|\,u+v)$, la fonction $q=(q_0\,\|\,q_0+g)$ appartient à
+$\mathrm{rm}(r,m)$, et
+\[
+d(f,q)=d(f_0,q_0)+d(f_1,q_0+g)=NL_r(f_0)+NL_{r-1}(f_1+q_0).
+\]
+D'où la première inégalité, la seconde résulte de la définition de $\rho(r-1,m-1)$.
+
+
+On remarque que la propriété PO est un invariant affine en conséuqence de quoi,
+toutes les restrictions de $f$ au hyperplan affine partagent la même 
+non-linéaratité d'ordre $r$.
+
+
+
+
+
+
+en utilisant  la valeur  $\rho(1,7)=56$ \cite{MYK,HOU},  et les valeurs obtenues récement $\rho(2,7)=40$ \cite{Wang19} 
+et $\rho(3,7)=20$ \cite{GKLW}. L'objectif de cette note, est de monrer que les  majorations sont strictes. Pour cela,
+nous devons établir que les fonctions de non linéarité quadratique optimale sont cubique ou quartique. Tout d'abord
+en utilisant la classification de $\bst(3,4,7)$, nous trouvons 4 classes de fonctions de degré au plus 4
+à distance 40 du Reed-Muller d'ordre 2 :
+
+\begin{table}
+\centering
+\caption{\label{prop:4classes}
+Les $4$ classes de fonctions de $\bst(3,4,7)$ de non linéarité quadratique 
+ $40$ ; leurs degrés sont
+$4,4,3,4$. Les distributions de $\Nl(f+q)$ sur les $2^{21}$ quadratiques homogènes $q$.
+}
+\begin{tabular}{lrrrr}
+\toprule
+classe & $40$ & $44$ & $48$ & $52$\\
+\midrule
+1 & 14\,336 & 290\,816 & 1\,598\,464 & 193\,536\\
+2 & 14\,336 & 290\,816 & 1\,589\,248 & 202\,752\\
+3 & 11\,264 & 307\,200 & 1\,768\,448 & 10\,240\\
+4 & 11\,264 & 307\,200 & 1\,670\,144 & 108\,544\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{result} Il  n'y a que 4 classes de fonctions de non linéarité quadratique 40,
+ce sont les fonctions de degré 3 et 4 énumérées dans la table \ref{prop:4classes}. 
+\end{result}
+\begin{proof}
+	La preuve numérique sera déroulée dans les sections qui suivent.
+\end{proof}
+
+\begin{proposition}
+	Les fonctions hautement non quadratiques de 7 bits sont dans $\rmc(4,7)$ et
+	nous avons $\rho(2,8) < 96$.
+\end{proposition}
+\begin{proof}
+	Considérons $f$ une fonction de $\boole(8)$ de non linéarité 96. L'inégalité de Plotkin
+	montre que $f = ( f_0 || f_1 )$ où $f_0$ et $f_1$ sont hautement non quadratique en 7
+	variables. La distribution des non linéarité d'ordre 1 de ces fonctions montre sur le
+	champs qu'une concaténation de deux fonctions hautement non quadratique est au plu égale
+	à 94.
+\end{proof}
+
+\begin{proposition}
+        Le rayon de recouvrement de \rmc(3,8) vérifie $\rho(3,8) < 60$.
+\end{proposition}
+\begin{proof}
+        En effet, si $f$ une fonction de $\boole(8)$ de non linéarité  cubique 60 alors
+	c'est la concaténation de deux fonctions de non linéarité cubique 20 dont les 
+	meilleures 3-approximation sont de non linéarité quadratique 40. Il s'ensuit que
+	$f\in\rmc(4,8)$ et on peut utiliser le résultat de \cite{GAO} qui affirme que
+        le rayon de recouvrement relatif $\rho_4(3,8) =  56$  pour conclure.
+\end{proof}
+
+
+\section{Classification}
+\label{sec:class}
+
+Nous notons $\bst(s,t,m)$ l'espace des fonctions booléennes
+de degré au plus $t$ et de valuation supérieure ou égale à $s$.
+Deux fonctions Booléennes $f$ et $g$ de $\boole(m)$ sont dites $r$-équivalentes
+quand il existe une transformation affine $\agl s \in\AGL(2,m)$ tel que $\deg( g+f\circ \agl s) \leq r$. 
+Nous notons $\clst(s,t,m)$ un système de représentants sous 
+cette action. Le nombre de classes est déterminé par la formule 
+de Burnside  et $\clst(s, t, m)$ s'obtient par descente à partir de $\bst(s+1, t, m)$.  
+
+
+
+
+Nous sommes partis des stabiliseurs des 179 classes  de $\bst(4,5,7)$ pour obtenir un système
+de représentants de $\bst(3,5,7)$.   Le stabiliseur
+de $f\in\bst(4,5,7)$ est le sous-groupe $S$ composés des  $\agl s$ tel que $\deg( f + f\circ \agl s ) \leq 3$.
+Les orbites de $\bst(3,5,7)$ 3-equivalentes à $f$ ss'obtiennent par l'action 
+$\bst(3,3,7)\ni c\mapsto  c\circ \agl s +( h + h\circ \agl s)$. Pour la réalisation, nous
+avons distingué deux situations : suivant l'ordre de $S$.
+
+La méthode de descente est décrite dans [VGPL],
+une description des  $118\,140\,881\,980\approx 2^{36.78}$ 
+classes est présentée dans la page du projet numérique \cite{PN}, 
+sous la forme de 178 tableaux de $2^{29}$ bits, après  compression 
+la donnée pèse moins d'un gigaoctet. 
+
+
+
+\begin{result}
+	Les quintiques de de $\boole(7)$ ne sont pas hautement quadratique.   
+\end{result}
+\begin{proof} On peut vérifier ce point en appliquant le décodage par symbole d'inforimation de Prange.
+\end{proof}
+
+\section{Structure des quintique}
+
+Les mots de poids mininum du translaté de $f+\rmc(r,m)$ sont
+les leaders associés à $f$. Convenons de dire que $f$ définit
+un orphelin ou urcosets quand l'union des supports des leaders 
+de $f$ est égal à $\fd(m)$. Un résultat fondamental de \cite{BRUALDI}
+affirme que si $f$ définit un orphelin alors, pour tout $a\in\fd(m)$.
+$\NL(r,f) = \NL(r,f+\delta_a)$.
+
+Nous avons déterminé les classes dont la non-linéarité
+quadratique est supérieure ou égale à 38 en combinant un 
+filtre basé sur l'algorithme de
+Prange avec une recherche explicite de leader.  Nous obtenons
+51 fonctions : 1 cubique,  36 quartique et 14 quintique.  
+
+L'ensemble des données de classification 
+de $\bst(3,5,7)$ sont accessibles via la
+page du project \cite{GL26}.
+
+Il est bien connu que le rayon de recouvrement du Reed-Muller d'ordre
+$m-2$ est égal à 2. Un résultat que nous pouvons préciser de la 
+façon suivante :
+
+\begin{lemma}
+	Si $f$ est une fonction de degré $m-1$ alors il
+	existe une fonction de degré exactement $m-2$ à
+	distance 2 de $f$.  
+\end{lemma}
+\begin{proof}
+Considérons $f$ de degré $m-1$, 
+$$
+f(x) \equiv \sum_{i} a_i \widehat{ x_i}  + \sum_{i<j} a_{ij} \widehat{x_{ij}}\mod {\rmc(m-3,m)} 
+$$
+Notons $a=(a_1,a_2,\ldots,a_m)$, pour tout $v\in\fd(m)$, 
+la fonction $\delta_v( x ) + \delta_{a+v}( x ) + f( x )$ est nulle modulo $\rmc(m-1,m)$ 
+et le coefficient  de degré $m-2$ est donné par :
+$$
+	 \sum_{i<j} a_i + a_j + a_i v_j + a_j v_i + a_i a_j  + a_{ij},
+$$
+Une fonction de degré 1 en $v$ qui n'est pas contante  
+car au mois l'un des l'un des $a_i$ n'est pas nul.
+\end{proof}
+
+\begin{result}
+Les 51 classes de non linéarité quadratique supérieure ou égale
+à 38 fonctions définissent des orphelins du Reed-Muller d'ordre 2.
+	Une modification ponctuelle de ces fonctions diminue 
+	leur distance au Reed-Muller d'ordre 2.
+\end{result}
+
+
+\begin{proposition}
+\label{prop:complet}
+Si $f\in\boole(7)$ est de non linéarité quadratique $40$, 
+alors $f$ est une fonction de degré au plus 4 équivalente 
+à une des fonctions de la table \ref{TABLE}.
+\end{proposition}
+\begin{proof}
+Nous savons que si $f$ n'est pas de degré $\leq 4$, elle ne peut pas être de degré 5, ni 7. 
+Supposons que celle ci soit de degré 6.  Considérons une fonction $g=\delta_a+\delta_b+f$ 
+de degré 5 à distance 2 de $f$ comme dans le Lemme \ref{MODIF}. La nonlinéarité de $g$ est
+38, et elle définit un urcoset, il suit que $ \NL(2, g + \delta_a)  < 38$ 
+et donc $\NL(2,f) < 40$, en contradiction avec notre hypothèse.
+\end{proof}
+
+
+\begin{coro}
+	Le rayon de recouvrement de $\rmc(2, 8)$ vérifie $\rho(2,8) < 96$.
+\end{coro}
+\begin{proof}
+\end{proof}
+
+
+\begin{coro}
+	Le rayon de recouvrement de $\rmc(3, 8)$ vérifie $\rho(3,8) < 60$.
+\end{coro}
+\begin{proof}
+\end{proof}
+
+
+% =====================================================================
+\begin{thebibliography}{99}
+\bibitem{Wang19} Q.~Wang, \emph{The covering radius of the Reed--Muller code $\rmc(2,7)$ is 40},
+ Discrete Math. \textbf{342}(12), 111625, 2019.
+\bibitem{GKLW} J.~Gao, H.~Kan, Y.~Li, Q.~Wang, \emph{The covering radius of the third-order
+ Reed--Muller code $\rmc(3,7)$ is 20}, arXiv:2206.10881.
+\bibitem{Gao26} J.~Gao, \emph{Numerical results and asymptotic lower bound on the covering
+ radius of Reed--Muller codes $\rmc(2,11)$ and $\rmc(3,n)$}, IEICE Trans.
+ Fundamentals \textbf{E109-A}(1), 35--46, 2026.
+\bibitem{DMT22} R.~Dougherty, R.~D.~Mauldin, M.~Tiefenbruck, \emph{The covering radius of the
+ Reed--Muller code $\rmc(m-4,m)$ in $\rmc(m-3,m)$}, IEEE Trans. Inform. Theory
+ \textbf{68}(1), 560--571, 2022.
+\bibitem{GL26} V.~Gillot, P.~Langevin, \emph{Classification of $\bst(3,5,7)$},\newline
+\texttt{http://langevin.univ-tln.fr/project/B357/B357.html}
+\bibitem{GL23} V.~Gillot, P.~Langevin, \emph{Covering radius of $\rmc(4,8)$},
+ arXiv:2305.03493, 2023 ; projet agl8, \texttt{langevin.univ-tln.fr/project/agl8}.
+\bibitem{LL05} P.~Langevin, G.~Leander, \emph{Classification of Boolean quartic forms in eight
+ variables}, in \emph{Boolean Functions in Cryptology and Information Security}, NATO Sci.
+ Peace Secur. Ser. D \textbf{18}, 139--147, 2005.
+\bibitem{Hou96} X.-D.~Hou, \emph{$GL(m,2)$ acting on $R(r,m)/R(r-1,m)$}, Discrete Math.
+ \textbf{149}, 99--122, 1996.
+\bibitem{CL92} G.~Cohen, S.~Litsyn, \emph{On the covering radius of Reed--Muller codes},
+ Discrete Math., 1992, doi:10.1016/0012-365X(92)90542-N.
+\end{thebibliography}
+
+\end{document}

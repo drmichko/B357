@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2025.6.27)  27 OCT 2026 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/CVE-2023-32700 patched) (preloaded format=pdflatex 2025.6.27)  30 OCT 2026 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -397,42 +397,70 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip62
 )
-\c@theorem=\count304
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+\everycr=\toks34
+\minrowclearance=\skip63
+\rownum=\count304
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+\c@theorem=\count305
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
+\l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box57
 )
 (./rho28.aux)
 \openout1 = `rho28.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \degres on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Info: Redefining \degres on input line 49.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 45.
+(french.ldf)             reported on input line 49.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 45.
-LaTeX Info: Redefining \up on input line 45.
+(french.ldf)             reported on input line 49.
+LaTeX Info: Redefining \up on input line 49.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -446,34 +474,9 @@ Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen197
-\scratchbox=\box58
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen198
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks35
-))) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\Gin@req@height=\dimen199
-\Gin@req@width=\dimen256
+)
+\Gin@req@height=\dimen197
+\Gin@req@width=\dimen198
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -509,589 +512,171 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 45.
+Package hyperref Info: Link coloring OFF on input line 49.
 (./rho28.out) (./rho28.out)
 \@outlinefile=\write3
 \openout3 = `rho28.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count307
+\scratchdimen=\dimen199
+\scratchbox=\box58
+\nofMPsegments=\count308
+\nofMParguments=\count309
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count310
+\MPscratchDim=\dimen256
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
+\everyMPtoPDFconversion=\toks36
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./rho28.toc)
-\tf@toc=\write4
-\openout4 = `rho28.toc'.
-
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `MYK' on page 2 undefined on input line 71.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 167.
 
-
-LaTeX Warning: Citation `HOU' on page 2 undefined on input line 71.
-
-
-LaTeX Warning: Citation `GAO' on page 2 undefined on input line 122.
-
-LaTeX Font Info:    Trying to load font information for U+euf on input line 131
+LaTeX Font Info:    Trying to load font information for U+euf on input line 192
 .
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
+) [2]
 
-LaTeX Warning: Citation `PN' on page 2 undefined on input line 143.
-
-[2]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-61.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Overfull \hbox (37.03416pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=2 class=10 deg=4 anf=abd+acd+bcd+abce+acde+bcdf+acef+b
-cef+adef+bdef+bcg+cdg+beg+afg[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 212.
 
 
-Overfull \hbox (14.40068pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=3 class=10 deg=4 anf=abc+abce+ade+acde+bcdf+acef+bcef+
-adef+bdef+bcg+cdg+beg+afg[] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 212.
 
 
-Overfull \hbox (59.66765pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=4 class=10 deg=4 anf=abd+bcd+ace+bce+abce+acde+bcdf+ac
-ef+bcef+adef+bdef+cdg+aeg+beg+afg[] 
- []
-
-
-Overfull \hbox (82.30113pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=5 class=10 deg=4 anf=abd+abce+acde+bcdf+acef+bcef+adef
-+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg[] 
- []
-
-
-Overfull \hbox (127.5681pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=6 class=10 deg=4 anf=acd+abe+ace+abce+acde+bcdf+acef+b
-cef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg[] 
- []
-
-
-Overfull \hbox (104.93462pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=7 class=10 deg=4 anf=acd+abce+ade+acde+bcdf+acef+bcef+
-adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg[] 
- []
-
-
-Overfull \hbox (144.54321pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=8 class=118 deg=5 anf=abc+acd+abde+adf+bdf+bcdf+aef+be
-f+abef+cef+abcef+adg+bdg+cdg+abcdg+beg+aceg+abfg[] 
- []
-
-
-Overfull \hbox (25.71742pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=11 class=134 deg=5 anf=abc+bcd+cde+bdf+acdf+aef+abef+a
-bcef+adg+abcdg+abeg+ceg+cfg[] 
- []
-
-
-Overfull \hbox (54.00928pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=12 class=135 deg=5 anf=abc+abe+bde+cde+acde+abdf+cdf+a
-ef+abef+abcef+adg+abcdg+abeg+cfg[] 
- []
-
-
-Overfull \hbox (87.9595pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=13 class=149 deg=5 anf=abc+abd+bcd+ade+abcde+bdf+cdef+
-acg+abeg+afg+bfg+cfg+bcfg+dfg+adfg+efg[] 
- []
-
-
-Overfull \hbox (76.64276pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=14 class=159 deg=5 anf=abe+abcde+bcf+bdf+acdf+bcdf+cef
-+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg[] 
- []
-
-
-Overfull \hbox (121.90973pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=15 class=159 deg=5 anf=abc+ace+ade+abcde+bcf+bdf+acdf+
-bcdf+cef+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg[] 
- []
-
-
-Overfull \hbox (212.44366pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=16 class=159 deg=5 anf=abc+bcd+cde+abcde+acf+bcf+adf+a
-cdf+bcdf+aef+bef+cef+bcef+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg[] 
- []
-
-
-Overfull \hbox (235.07715pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=17 class=159 deg=5 anf=abc+abd+bde+abcde+acf+bcf+bdf+a
-cdf+bcdf+aef+bef+cef+bcef+adg+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg[] 
- []
-
-
-Overfull \hbox (195.46855pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=23 class=2 deg=4 anf=abc+abd+bcd+abcd+ace+bce+ade+bcde
-+bcf+adf+bdf+bef+cdef+bcg+abcg+adg+cdg+aeg+abfg+aefg+defg[] 
- []
-
-
-Overfull \hbox (138.88484pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=24 class=3 deg=4 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+
-acf+bcf+aef+bef+bcef+cdef+acg+bcg+bdg+acfg+defg[] 
- []
-
-
-Overfull \hbox (70.98439pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=25 class=3 deg=4 anf=abc+bcd+ace+ade+cde+bcde+acf+bcf+
-aef+bcef+cdef+bcg+adg+bdg+acfg+defg[] 
- []
-
-
-Overfull \hbox (48.3509pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=26 class=3 deg=4 anf=abc+ace+bce+bde+cde+bcde+adf+bdf+
-aef+bcef+cdef+aeg+beg+acfg+defg[] 
- []
-
-
-Overfull \hbox (93.61787pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=27 class=3 deg=4 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+
-aef+bef+bcef+cdef+acg+bcg+bfg+acfg+defg[] 
- []
-
-
-Overfull \hbox (82.30113pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=28 class=4 deg=4 anf=abc+bcd+abe+ace+bce+bde+abf+abcf+
-adf+acef+cdef+bdg+bceg+bdfg+aefg+befg[] 
- []
-
-
-Overfull \hbox (14.40068pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=29 class=4 deg=4 anf=bcd+ace+bde+abcf+adf+acef+cdef+ab
-g+cdg+bceg+bdfg+aefg+befg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=30 class=4 deg=4 anf=abc+abd+acd+abe+ace+ade+bde+bcf+a
-bcf+adf+aef+acef+cdef+abg+cdg+bceg+bdfg+aefg+befg[] 
- []
-
-
-Overfull \hbox (82.30113pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=31 class=4 deg=4 anf=bcd+ace+bce+abf+abcf+adf+bdf+acef
-+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg[] 
- []
-
-
-Overfull \hbox (104.93462pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=32 class=4 deg=4 anf=bcd+ace+bce+acf+abcf+bdf+cdf+aef+
-acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg[] 
- []
-
-
-Overfull \hbox (104.93462pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=33 class=5 deg=4 anf=abd+bcd+ace+bce+ade+bde+acde+abf+
-acf+abcf+bdf+cdf+bdef+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=34 class=5 deg=4 anf=abd+bcd+abe+ace+bce+ade+bde+acde+
-abf+bcf+abcf+bdf+cdf+bdef+abg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=36 class=5 deg=4 anf=abd+acd+abe+bce+ade+cde+acde+abf+
-abcf+adf+bdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=37 class=5 deg=4 anf=abd+acd+abe+ade+bde+acde+abf+bcf+
-abcf+adf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=38 class=5 deg=4 anf=abd+bcd+abe+ade+bde+acde+abf+bcf+
-abcf+bdf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (240.73552pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=39 class=5 deg=4 anf=abc+acd+ace+bce+ade+bde+cde+acde+
-abf+acf+bcf+abcf+adf+bdf+aef+bef+bdef+acg+bdg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (150.20158pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=40 class=5 deg=4 anf=abc+bcd+abe+bce+ade+cde+acde+abf+
-acf+bcf+abcf+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg[] 
- []
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 250.
 
 [3]
-Overfull \hbox (14.40068pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=41 class=5 deg=4 anf=bce+acde+abcf+cdf+aef+bdef+abg+ad
-g+bdg+bcdg+abeg+adfg+cefg[] 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 330.
 
 
-Overfull \hbox (240.73552pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=42 class=5 deg=4 anf=abd+acd+abe+bce+bde+cde+acde+abf+
-acf+bcf+abcf+adf+bdf+aef+bef+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg[] 
- []
-
-
-Overfull \hbox (138.88484pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=43 class=6 deg=4 anf=acd+bcd+abe+bce+bde+cde+abf+acf+b
-cf+adf+aef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg[] 
- []
-
-
-Overfull \hbox (25.71742pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=44 class=6 deg=4 anf=abd+ace+ade+bcf+bdf+cef+abg+abcg+
-adg+bdg+abdg+aceg+bcfg+defg[] 
- []
-
-
-Overfull \hbox (37.03416pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=46 class=7 deg=4 anf=abd+acd+bcd+abe+bde+cde+acf+adf+b
-df+aef+bcg+adg+abeg+acfg+defg[] 
- []
-
-
-Overfull \hbox (14.40068pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=47 class=7 deg=4 anf=abc+abe+ace+ade+bde+abf+adf+cdf+a
-ef+bcg+adg+abeg+acfg+defg[] 
- []
-
-
-Overfull \hbox (308.63597pt too wide) in paragraph at lines 212--212
-[]\T1/cmtt/m/n/10.95 num=49 class=91 deg=5 anf=abd+ace+bde+acf+bcf+adf+abcef+cd
-ef+acg+adg+bdg+cdg+abcdg+aeg+aceg+bceg+deg+bdeg+afg+bfg+cfg+bcfg+dfg+adfg+efg[]
- 
- []
-
-
-LaTeX Warning: Reference `sec:classes' on page 4 undefined on input line 238.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 330.
 
 [4]
-Overfull \hbox (28.35162pt too wide) in paragraph at lines 338--340
-   [] \T1/cmr/m/n/10.95 La clas-si-fi-ca-tion de $\OML/cmm/m/it/10.95 B\OT1/cmr
-/m/n/10.95 (4\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 4\OML/cmm/m/it/10.95 ; \O
-T1/cmr/m/n/10.95 8) = [](4\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 8)\OML/cmm/m
-/it/10.95 =[]\OT1/cmr/m/n/10.95 (3\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 8)$ 
-\T1/cmr/m/n/10.95 : $\OT1/cmr/m/n/10.95 998$ \T1/cmr/m/n/10.95 classes non null
-es (fi-chier \T1/cmtt/m/n/10.95 B-4-4-8.dat\T1/cmr/m/n/10.95 ,
- []
-
-[5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 352.
+(hyperref)                removing `math shift' on input line 375.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 352.
+(hyperref)                removing `math shift' on input line 375.
 
+[5] [6]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 352.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 521.
 
-[6]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 440.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 528.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rho' on input line 440.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 529.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 440.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 532.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 442.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 534.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 442.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 534.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 442.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 537.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 442.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 537.
 
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+40.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 460.
+LaTeX Font Warning: Font shape `T1/cmr/m/scit' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 541.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 460.
-
-[7]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 499.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 499.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 525.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 525.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 525.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 525.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.41927pt
-(hyperref)                removed on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 557.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 557.
-
-[8]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.41927pt
-(hyperref)                removed on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\le' on input line 598.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 598.
-
-
-LaTeX Warning: Reference `sec:classes' on page 9 undefined on input line 623.
-
-[9]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 653.
-
-
-Overfull \hbox (7.82552pt too wide) in paragraph at lines 658--659
-[]\T1/cmtt/m/n/10.95 bcd+ace+bce+acf+abcf+bdf+cdf+aef+acef+cdef+abg+bdg+bceg+de
-g+fg+bdfg+aefg+befg
- []
-
-[10] [11] (./rho28.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[7] (./rho28.aux)
 Package rerunfilecheck Info: File `rho28.out' has not changed.
-(rerunfilecheck)             Checksum: BA51B3108D49F235C7944F78669A3554;3696.
+(rerunfilecheck)             Checksum: 12D72EBFC12445398BE06EABC5B07554;2102.
  ) 
 Here is how much of TeX's memory you used:
- 13259 strings out of 476175
- 208552 string characters out of 5796271
- 1869793 words of memory out of 6000000
- 33289 multiletter control sequences out of 15000+600000
- 533543 words of font info for 95 fonts, out of 8000000 for 9000
+ 13768 strings out of 476175
+ 215179 string characters out of 5796271
+ 1878793 words of memory out of 6000000
+ 33803 multiletter control sequences out of 15000+600000
+ 543446 words of font info for 109 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 72i,10n,77p,358b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{theorem.2.3} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-cm-super/sfcc1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1
-095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on rho28.pdf (11 pages, 431154 bytes).
+ 72i,10n,77p,384b,585s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/cm-super/sfcc1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/cm-super/sfcc1728.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sf
+rm1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
+Output written on rho28.pdf (7 pages, 404349 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

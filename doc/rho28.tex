@@ -7,9 +7,14 @@
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage[table]{xcolor}
-\definecolor{plotkin}{RGB}{255,200,120}   % borne atteinte, cas non trivial
-\definecolor{trivial}{RGB}{225,225,225}   % borne atteinte, cas trivial r=m-1
 
+\definecolor{trivial}{RGB}{225,225,225}   % borne atteinte, cas trivial r=m-1
+\definecolor{plotkin}{RGB}{255,200,120}
+\definecolor{ameliore}{RGB}{170,210,255}
+
+
+\def\rougebf#1{\textcolor{red}{\bf #1}}
+\def\rouge#1{\textcolor{red}{#1}}
 % ---------- macros ----------
 \newcommand{\F}{\mathbb{F}_2}
 \newcommand{\wt}{\mathrm{wt}}
@@ -46,7 +51,8 @@
 
 \begin{abstract}
 Nous montrons que les majorations de Plotkin $\rho(2,8)\le 96$ et
-$\rho(3,8)\le 60$ sont strictes. La preuve combine la structure des fonctions
+$\rho(3,8)\le 60$ sont strictes, et même que $\rho(2,8)\le 94$ et
+$\rho(3,8)\le 59$. La preuve combine la structure des fonctions
 qui atteignent la borne de Plotkin (leurs restrictions aux hyperplans sont
 optimales) avec la classification de $\bst(3,5,7)$, qui montre que les
 fonctions de $7$ variables de non-linéarité quadratique $40$ sont de degré au
@@ -59,33 +65,34 @@ plus $4$ et se répartissent en $4$ classes.
 Le rayon de recouvrement $\rho(r,m)$ de $\rmc(r,m)$ est le maximum, sur les
 fonctions $f\in\boole(m)$, de la distance $\dist(f,\rmc(r,m))$, appelée
 non-linéarité d'ordre $r$ de $f$ et notée $\NL(r,f)$, une fonction
-à distance maximale est dite $r$-non linéaire optimale. Tous les rayons de
+à distance maximale est dite $r$-optimale. Tous les rayons de
 recouvrement sont connus pour $m\le 7$. La détermination de $\rho(1,9)$ vient
-d'être annoncée \cite{RM19} après 40 ans d'efforts
+d'être achevée \cite{RM19,HSS26} après 40 ans d'efforts
 ; les deux plus petits cas ouverts concernent alors les codes de Reed-Muller
-d'ordre $2$ et $3$ en $8$ variables, dont nous connaissant les encadrements~:
+d'ordre $2$ et $3$ en $8$ variables, dont nous connaissons les encadrements~:
 $$
 88 \le \rho(2,8) \le 96, \qquad 56\le \rho(3,8)\le 60 .
 $$
 % TODO: références pour les minorants 88 et 56 et pour les valeurs de la table.
 
+
 \begin{table}[ht]
 \centering
 \caption{$\rho(r,m)$. En orange : cas non triviaux où
-$\rho(r,m)=\rho(r,m-1)+\rho(r-1,m-1)$ (7 cas) ; en gris : même égalité pour
-$r=m-1$ (cas triviaux).}
+$\rho(r,m)=\rho(r,m-1)+\rho(r-1,m-1)$. En gras : résultats récents
+\cite{Wang19,GKLW,GL23,RM19,HSS26,KGP26}.}
 \label{tab:tab_rho}
 \begin{tabular}{c|ccccccccc}
 $r\backslash m$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
 \hline
-1 & 2 & \cellcolor{plotkin}6 & 12 & \cellcolor{plotkin}28 & 56 & \cellcolor{plotkin}120 & 242 & 496 & 996 \\
-2 & \cellcolor{trivial}1 & 2 & 6 & \cellcolor{plotkin}18 & 40 & 88-96 & 196-216 & 400-458 & 856-956 \\
-3 & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}8 & 20 & 56-60 & 111-156 & 194-372 & 454-832 \\
-4 &  & 0 & \cellcolor{trivial}1 & 2 & 8 & 26 & 58-86 & $\leq$ 242 & $\leq$ 614 \\
-5 &  &  & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}10 & 28-36 & $\leq$ 122 & $\leq$ 364 \\
-6 &  &  &  & 0 & \cellcolor{trivial}1 & 2 & 10 & $\leq$ 46 & $\leq$ 168 \\
-7 &  &  &  &  & 0 & \cellcolor{trivial}1 & 2 & \cellcolor{plotkin}12 & $\leq$ 58 \\
-8 &  &  &  &  &  & 0 & \cellcolor{trivial}1 & 2 & 12 \\
+1 & 2 & \cellcolor{plotkin}6 & 12 & \cellcolor{plotkin}28 & 56 & \cellcolor{plotkin}120 & \textbf{242} & 496 & 996 \\
+2 & 1 & 2 & 6 & \cellcolor{plotkin}18 & \textbf{40} & 88-96 & 196-216 & \textbf{408}-460 & 856-956 \\
+3 & 0 & 1 & 2 & \cellcolor{plotkin}8 & \textbf{20} & 56-60 & 111-156 & 194-372 & 454-832 \\
+4 &  & 0 & 1 & 2 & 8 & \textbf{26} & 58-86 & $\leq$ 242 & $\leq$ 614 \\
+5 &  &  & 0 & 1 & 2 & \cellcolor{plotkin}10 & 28-36 & $\leq$ 122 & $\leq$ 364 \\
+6 &  &  &  & 0 & 1 & 2 & 10 & $\leq$ 46 & $\leq$ 168 \\
+7 &  &  &  &  & 0 & 1 & 2 & \cellcolor{plotkin}12 & $\leq$ 58 \\
+8 &  &  &  &  &  & 0 & 1 & 2 & 12 \\
 \hline
 \end{tabular}
 \end{table}
@@ -98,12 +105,12 @@ avec $\rho(1,7)=56$ \cite{MYK,HOU} et les valeurs obtenues récemment
 $\rho(2,7)=40$ \cite{Wang19} et $\rho(3,7)=20$ \cite{GKLW}
 (on a $40+56=96$ et $20+40=60$).
 
-\begin{remark}  
-	La connaissance de $\rho(r,m)$ n'implique pas celle des 
-	fonctions $r$- optimale.  Le point cclé de cet article est
-	d'identifier toutes les classes de $\bst(3,6,7)$ qui
-	sont de non linéarité quadratique $\rho(2,7)=40$. Nous verrons que
-leur ensemble se résume à 4 classes : 1 cubique et 3 quartiques.
+\begin{remark}
+La connaissance de $\rho(r,m)$ n'implique pas celle des
+fonctions $r$-optimales. Le point clé de cet article est
+d'identifier toutes les fonctions de $\boole(7)$ qui
+sont de non-linéarité quadratique $\rho(2,7)=40$, à équivalence près. Nous
+verrons que leur ensemble se résume à 4 classes : 1 cubique et 3 quartiques.
 \end{remark}
 
 Nous nous intéressons aux fonctions qui atteignent cette borne, que nous
@@ -111,8 +118,8 @@ appelons \emph{Plotkin-extrémales} (section~\ref{sec:extremal}). Le principal
 résultat est le suivant.
 
 \begin{theorem}\label{thm:main}
-$\rho(2,8)<96$ et $\rho(3,8)<60$. Autrement dit, $\rho(2,8)\le 95$ et
-$\rho(3,8)\le 59$.
+$\rho(2,8)\le 94$ et $\rho(3,8)\le 59$. En particulier les bornes de Plotkin
+$96$ et $60$ ne sont pas atteintes.
 \end{theorem}
 
 La preuve repose sur un fait numérique : les fonctions de $7$ variables de
@@ -345,6 +352,26 @@ $$
 ce qui est absurde.
 \end{proof}
 
+\begin{proposition}\label{prop:28b}
+$\rho(2,8)\le 94$.
+\end{proposition}
+\begin{proof}
+Par la proposition~\ref{prop:28}, $\rho(2,8)\le 95$. Soit
+$f=(f_0\,\|\,f_1)\in\boole(8)$ avec $\NL(2,f)=95$. Par \eqref{eq:base} et
+$\rho(1,7)=56$, $\NL(2,f_0)\ge 39$ ; l'équivalence $f\sim(f_1\,\|\,f_0)$
+(par $x_8\mapsto x_8+1$) donne $\NL(2,f_1)\ge 39$. Comme $\rho(2,7)=40$, ces
+non-linéarités sont dans $\{39,40\}$. Les mots de $\rmc(2,7)$ sont de poids
+pair, donc $\NL(2,h)\equiv\wt(h)\pmod 2$ ; or $\wt(f)=\wt(f_0)+\wt(f_1)$
+est impair puisque $\NL(2,f)=95$ est impair. Les deux moitiés sont donc de poids
+de parités différentes : l'une est de non-linéarité $39$, l'autre $40$. Quitte
+à échanger $f_0$ et $f_1$, on a $\NL(2,f_0)=39$ et $\NL(2,f_1)=40$. Par la
+proposition~\ref{prop:complet}, $f_1$ est équivalente à l'une des $4$ classes de
+la table~\ref{tab:4classes}, donc $\NL(1,f_1+q)\le 52$ pour toute quadratique
+$q$ (voir la preuve de la proposition~\ref{prop:28}). Avec $q_0$ meilleure
+approximation de $f_0$, \eqref{eq:base} donne
+$\NL(2,f)\le 39+52=91<95$, ce qui est absurde.
+\end{proof}
+
 \subsection{Le cas de $\rmc(3,8)$}
 
 \begin{lemma}\label{lem:degre}
@@ -382,10 +409,14 @@ théorème~\ref{thm:main}.
 %=====================================================================
 \section{Conclusion}
 
+
+
+
 Nous avons montré que les inégalités de Plotkin ne sont pas atteintes pour
-$(r,m)=(2,8)$ et $(3,8)$, de sorte que
+$(r,m)=(2,8)$ et $(3,8)$ (proposition~\ref{prop:28} et~\ref{prop:38}), puis, par
+un argument de parité, que $\rho(2,8)\le 94$ (proposition~\ref{prop:28b}), de sorte que
 $$
-88\le\rho(2,8)\le 95,\qquad 56\le\rho(3,8)\le 59.
+88\le\rho(2,8)\le 94,\qquad 56\le\rho(3,8)\le 59.
 $$
 La preuve combine deux ingrédients : le lemme d'extrémalité, qui force toutes
 les restrictions aux hyperplans d'une fonction Plotkin-extrémale à être
@@ -403,22 +434,39 @@ fonctions de $7$ variables de non-linéarité quadratique $38$ ou $39$, y
 compris de degré $6$ et $7$, qui ne sont pas couvertes par $\bst(3,5,7)$.
 
 %=====================================================================
+La table~\ref{tab:tab_rho2} reporte les bornes supérieures voisines qui en
+découlent par l'inégalité de Plotkin.
+
+\begin{table}[ht]
+\centering
+\caption{$\rho(r,m)$ après $\rho(2,8)\le 94$ et $\rho(3,8)\le 59$.
+En bleu : bornes supérieures améliorées par l'inégalité de Plotkin.
+En gras : résultats récents
+\cite{Wang19,GKLW,GL23,RM19,HSS26,KGP26}.}
+\label{tab:tab_rho2}
+\begin{tabular}{c|ccccccccc}
+$r\backslash m$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+\hline
+1 & 2 & 6 & 12 & 28 & 56 & 120 & \textbf{242} & 496 & 996 \\
+2 & 1 & 2 & 6 & 18 & \textbf{40} & \cellcolor{ameliore}88-94 & \cellcolor{ameliore}196-214 & \cellcolor{ameliore}\textbf{408}-456 & \cellcolor{ameliore}856-952 \\
+3 & 0 & 1 & 2 & 8 & \textbf{20} & \cellcolor{ameliore}56-59 & \cellcolor{ameliore}111-153 & \cellcolor{ameliore}194-367 & \cellcolor{ameliore}454-823 \\
+4 &  & 0 & 1 & 2 & 8 & \textbf{26} & \cellcolor{ameliore}58-85 & \cellcolor{ameliore}$\leq$ 238 & \cellcolor{ameliore}$\leq$ 605 \\
+5 &  &  & 0 & 1 & 2 & 10 & 28-36 & \cellcolor{ameliore}$\leq$ 121 & \cellcolor{ameliore}$\leq$ 359 \\
+6 &  &  &  & 0 & 1 & 2 & 10 & $\leq$ 46 & \cellcolor{ameliore}$\leq$ 167 \\
+7 &  &  &  &  & 0 & 1 & 2 & 12 & $\leq$ 58 \\
+8 &  &  &  &  &  & 0 & 1 & 2 & 12 \\
+\hline
+\end{tabular}
+\end{table}
+
+%=====================================================================
 \section{Remarques et compléments}
 
-\begin{remark}[Parité : $\rho(2,8)\le 94$]\label{rem:parite}
-Les mots de $\rmc(r,m)$, $r\le m-1$, sont de poids pair, donc
-$\NL(r,h)\equiv\wt(h)\pmod 2$. Ceci améliore la proposition~\ref{prop:28}.
-Supposons $\NL(2,f)=95$. Par \eqref{eq:base} et $\rho(1,7)=56$,
-$\NL(2,f_0)\ge 39$ et, par symétrie, $\NL(2,f_1)\ge39$, donc ces valeurs
-sont dans $\{39,40\}$. Comme $\wt(f)=\wt(f_0)+\wt(f_1)$ est impair, une des
-deux moitiés, notons-la $f_a$, a pour non-linéarité $39$ et l'autre, $f_b$,
-pour non-linéarité $40$. Par la proposition~\ref{prop:complet}, $f_b$ est dans
-les $4$ classes, et l'argument de la preuve de la proposition~\ref{prop:28},
-appliqué à $(f_a\,\|\,f_b)$, donne
-$\NL(2,f)\le 39+52=91<95$, absurde. Ainsi $\NL(2,f)\ne 95$ et
-$\rho(2,8)\le 94$. Pour $(3,8)$ le même argument ne conclut pas : il donne
-seulement que, si $\NL(3,f)=59$, une moitié est de non-linéarité cubique $19$ et
-l'autre de non-linéarité $20$ et de degré au plus $4$.
+\begin{remark}[Parité pour $\rmc(3,8)$]\label{rem:parite}
+L'argument de la proposition~\ref{prop:28b} ne conclut pas pour $(3,8)$ : si
+$\NL(3,f)=59$, une moitié est de non-linéarité cubique $19$ et l'autre de
+non-linéarité cubique $20$ et de degré au plus $4$, mais l'inégalité~\eqref{eq:base}
+donne seulement $19+40=59$ : il n'y a pas de contradiction.
 \end{remark}
 
 \begin{remark}[Cohérence pour $r=1$]
@@ -435,13 +483,14 @@ $(5,8)$ et $(7,10)$. Pour $r=m-3$, la borne est atteinte lorsque $m$ est pair
 ($m=4,6,8,10$) et stricte lorsque $m$ est impair ($m=5,7,9$). Le
 théorème~\ref{thm:main} montre que $(2,8)$ et $(3,8)$ ne prolongent pas le cas
 $m=6$ ; $(2,7)$, $(3,7)$ et $(4,7)$ sont aussi stricts. Pour $r=1$, la borne
-cesse d'être atteinte à partir de $m=10$ : $\rho(1,9)=243<248$.
+cesse d'être atteinte à partir de $m=10$ : $\rho(1,9)=242<248$.
 \end{remark}
 
 \begin{remark}[Bornes voisines]
-Par \eqref{eq:plotkin}, on obtient $\rho(2,9)\le 215$, $\rho(3,9)\le 154$ et
-$\rho(4,9)\le 85$ (au lieu de $216$, $156$ et $86$), et $\rho(2,9)\le 214$,
-$\rho(3,9)\le 153$ avec la remarque~\ref{rem:parite}.
+Par \eqref{eq:plotkin}, les nouvelles valeurs donnent $\rho(2,9)\le 214$,
+$\rho(3,9)\le 153$ et $\rho(4,9)\le 85$ (au lieu de $216$, $156$ et $86$),
+et les améliorations en cascade de la table~\ref{tab:tab_rho2}. Dans la colonne
+$m=10$, $\rho(2,10)\le 456$ utilise aussi $\rho(1,9)=242$.
 \end{remark}
 
 \begin{remark}[Vérifiabilité]
@@ -465,6 +514,11 @@ elle atteint $\rho(r,m)$ ; ce sont deux notions distinctes.
 
 %=====================================================================
 \begin{thebibliography}{99}
+
+\bibitem{KGP26} K.~Khoruzhii, P.~Gelß, S.~Pokutta, \emph{The weight distribution
+ of the third-order Reed--Muller code of length 2048}, arXiv:2607.02365, 2026.
+\bibitem{HSS26} X.-D.~Hou, E.~Sabo, F.~Slaughter, \emph{The covering radius of
+ $\rmc(1,9)$ is precisely $242$}, Cryptology ePrint Archive, Paper 2026/2529, 2026.
 \bibitem{MYK} J.~Mykkeltveit, \emph{The covering radius of the $(128,8)$
  Reed--Muller code is 56}, IEEE Trans. Inform. Theory \textbf{26}(3), 359--362,
  1980. % TODO: vérifier
