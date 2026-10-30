@@ -53,6 +53,7 @@ infos      :
 web        :
 	cp B357.html  ~/web-docs/project/B357/B357.html 
 	cp NQ-38-40-3-5-7.txt  ~/web-docs/project/B357/. 
+	cp doc/rho28.pdf  ~/web-docs/project/B357/. 
 	#cp info-3-5-7.txt  ~/web-docs/project/B357/. 
 	#mkdir -p ~/web-docs/project/B357/data 
 	#cp  data/*  ~/web-docs/project/B357/data/. 
