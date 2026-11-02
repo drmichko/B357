@@ -421,16 +421,16 @@ théorème~\ref{thm:main}.
 
 \section{Rayon de recouvrement relatif}
 
-\paragraph{Notations.}
+
 Pour $f\in\mathcal B(m)$, $\mathrm{NQ}(f)=d(f,\mathrm{RM}(2,m))$ et $\mathrm{NL}(f)=d(f,\mathrm{RM}(1,m))$. On note
 $M(f)=\max_q \mathrm{NL}(f+q)$, o\`u $q$ parcourt les quadriques homog\`enes, et $\rho_5(2,8)=\max\{\mathrm{NQ}(f)\;:\; f\in\mathcal B(8),\ \deg f\le 5\}$. C'est la d\'efinition retenue ici du rayon relatif. Les tableaux pr\'ec\'edents donnent, pour chaque classe, la distribution de $q\mapsto \mathrm{NL}(f+q)$, donc en particulier $\mathrm{NQ}(f)$ (le minimum) et $M(f)$ (le maximum).
 
-\paragraph{Formule de Wang.}
+
 Soit $f=(f_0\Vert f_1)\in\mathcal B(8)$, o\`u $f_0,f_1\in\mathcal B(7)$ sont les restrictions \`a $x_8=0$ et $x_8=1$. Une quadrique de $\mathcal B(8)$ s'\'ecrit $Q_0+x_8\ell$, avec $Q_0$ quadratique et $\ell$ affine. En minimisant d'abord sur $\ell$, puis sur la partie affine de $Q_0$, on obtient
 $$\mathrm{NQ}(f_0\Vert f_1)=\min_{q}\ \bigl[\mathrm{NL}(f_0+q)+\mathrm{NL}(f_1+q)\bigr],$$
 o\`u $q$ parcourt les $2^{21}$ quadriques homog\`enes de $\mathcal B(7)$. Cette formule a \'et\'e v\'erifi\'ee num\'eriquement sur une fonction al\'eatoire de $\mathcal B(6)$ (m\^eme valeur que le calcul direct).
 
-\paragraph{Majoration.}
+
 En prenant un $q$ qui r\'ealise $\mathrm{NQ}(f_1)$, on a $\mathrm{NQ}(f_0\Vert f_1)\le \mathrm{NQ}(f_1)+M(f_0)$, et sym\'etriquement. Si $\deg f\le 5$, alors $f_0$ et $f_1$ sont de degr\'e $\le5$. Comme $\mathrm{NQ}\le 40$ dans $\mathcal B(7)$ et $\mathrm{NL}\le 56$, on distingue deux cas :
 \begin{itemize}
 \item $\mathrm{NQ}(f_0)\le 36$ ou $\mathrm{NQ}(f_1)\le 36$ : alors $\mathrm{NQ}(f)\le 36+56=92$ ;
@@ -450,37 +450,8 @@ $(40,40)$ : 10 paires & 4 & 0 & 6\\
 \end{center}
 Aucune paire ne d\'epasse 92. Les paires $(38,40)$ sont toutes major\'ees par $90$, car $M\le 52$ pour les classes de $\mathrm{NQ}=40$ : au minimum de $f_0$ ($\mathrm{NL}=38$), il faudrait $\mathrm{NL}(f_1+q)=56$ pour atteindre $94$. Les maxima $M$ lus dans les tableaux sont $52$ (classes de $\mathrm{NQ}=40$), $54$ (classes de $\mathrm{NQ}=38$ de degr\'e $4$) et $54$ en degr\'e $5$, sauf la fonction n$^\circ 13$ du tableau de degr\'e $5$ (classe $177$) qui atteint $56$ pour 64 quadriques seulement. Comme cette fonction a $1\,408$ quadriques de $\mathrm{NL}=38$, elle ne peut pas \^etre appari\'ee \`a elle-m\^eme avec somme $\ge 94$.
 
-\paragraph{Borne sup\'erieure.}
-On obtient $\rho_5(2,8)\le 92$, sous deux hypoth\`eses : la liste des classes de $\mathcal B(3,5,7)$ de $\mathrm{NQ}\ge 38$ est compl\`ete, et $\rho(2,7)=40$ (Wang). Ce majorant est un plafond du comptage, pas une valeur atteinte.
 
-\paragraph{Borne inf\'erieure : les bent.}
-Les fonctions bent de $\mathcal B(8)$ sont de degr\'e $\le4$. D'apr\`es un test exhaustif sur toutes les bent de $\mathcal B(8)$ (non reproduit ici), $\mathrm{NQ}=88$ pour toutes. Ce r\'esultat a \'et\'e re-v\'erifi\'e sur $20$ fonctions de degr\'e $4$ (formule de Wang, exhaustive sur les $2^{21}$ quadriques de $\mathcal B(7)$), et la distribution ci-dessous a \'et\'e calcul\'ee en d\'etail sur $4$ d'entre elles. Pour $f$ bent, la distribution de $\mathrm{NL}(f+Q)$ sur les $2^{28}$ quadriques homog\`enes $Q$ de $\mathcal B(8)$, class\'ees par rang de la forme altern\'ee de $Q$, est la m\^eme pour ces $4$ fonctions :
-\begin{center}\footnotesize
-\begin{tabular}{r r p{10cm}}
-\toprule
-rang & nombre de $Q$ & $\mathrm{NL}(f+Q)$ : effectif\\
-\midrule
-0 & 1 & 120 : 1\\
-2 & 10\,795 & 112 : 10\,795\\
-4 & 5\,622\,036 & 96 : 46\,592 ; 100 : 648\,704 ; 104 : 2\,899\,456 ; 108 : 1\,759\,744 ; 112 : 267\,477 ; 120 : 63\\
-6 & 149\,920\,960 & 88 : 5\,376 ; 92 : 485\,888 ; 96 : 4\,408\,320 ; 100 : 30\,897\,664 ; 104 : 68\,104\,960 ; 108 : 42\,950\,656 ; 112 : 3\,068\,096\\
-8 & 112\,881\,664 & 88 : 16\,128 ; 92 : 534\,016 ; 96 : 3\,988\,992 ; 100 : 25\,527\,296 ; 104 : 49\,783\,552 ; 108 : 31\,413\,760 ; 112 : 1\,617\,920\\
-\bottomrule
-\end{tabular}
-\end{center}
-Le minimum $88$ n'est atteint que par des quadriques de rang $6$ et $8$. Comme les bent sont de degr\'e $4\le 5$, on a $\rho_5(2,8)\ge 88$.
-
-\paragraph{Ce qui reste ouvert.}
-$$88\le\rho_5(2,8)\le 92.$$
-Les 646 paires de classes de borne exactement $90$ et les 209 de borne $92$ sont les seules qui pourraient donner plus de $88$. Une recherche heuristique du placement (recuit simul\'e sur $\mathrm{GL}(7,2)\times\mathbf{F}_2^{21}$, $12$ essais de $40\,000$ it\'erations sur les paires de classes de $\mathrm{NQ}=40$ de degr\'e $4$) n'a pas d\'epass\'e $84$. Cela ne prouve rien : un placement \`a $88$ ou plus pourrait exister sans \^etre trouv\'e.
-
-\paragraph{Remarque sur les d\'ecompositions.}
-Si $f=x_8g+h$, alors $f_0=h$ et $f_1=g+h$. Le changement de variable $x_8\mapsto x_8+\ell$, avec $\ell$ lin\'eaire, donne $f_0'=h+\ell g$ et $f_1'=g+h+\ell g$, sans changer $\mathrm{NQ}(f)$. Une m\^eme fonction a donc au moins $128$ d\'ecompositions, en g\'en\'eral dans des paires de classes diff\'erentes. Pour atteindre une valeur $v$, il faut que toutes ces paires aient un majorant $\ge v$. Je n'ai pas exploit\'e cette condition, qui d\'epend du placement.
-
-%=====================================================================
 \section{Conclusion}
-
-
 
 
 Nous avons montré que les inégalités de Plotkin ne sont pas atteintes pour
