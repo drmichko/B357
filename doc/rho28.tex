@@ -14,6 +14,7 @@
 
 \definecolor{trivial}{RGB}{225,225,225}   % borne atteinte, cas trivial r=m-1
 \definecolor{plotkin}{RGB}{255,200,120}
+\definecolor{plotkin}{RGB}{206, 186 , 206}
 \definecolor{ameliore}{RGB}{170,210,255}
 
 
@@ -29,10 +30,14 @@
 \def\AGL(#1,#2){ {\rm AGL}(#1,#2) }
 \def\agl#1{ {\mathfrak #1 }}
 \def\rmc(#1,#2){ \textsc {rm}(#1,#2) }
+\def\stab(#1,#2){ \textsc {stab}(#1,#2) }
 \def\boole(#1){\mathcal{B}(#1)}
 \def\fd(#1){\mathbb{F}_2^{#1}}
+\def\gzip(#1){\texttt{zip-\{#1\}-3-3-7.zip.gz}}
 
-\def\SPB#1{\textcolor{blue}{#1}-}
+\def\numero(#1){\{#1\}}
+
+\def\SPB#1{\textcolor{blue}{#1}}
 
 
 % ---------- theorem environments ----------
@@ -76,48 +81,40 @@ non-linéarité d'ordre $r$ de $f$ et notée $\NL(r,f)$, une fonction
 recouvrement sont connus pour $m\le 7$. La détermination de $\rho(1,9)$ vient
 d'être achevée \cite{RM19,HSS26} après 40 ans d'efforts
 ; les deux plus petits cas ouverts concernent alors les codes de Reed-Muller
-d'ordre $2$ et $3$ en $8$ variables, dont nous connaissons les encadrements~:
+d'ordre $2$ et $3$ en $8$ variables, dont nous connaissons les encadrements :
 $$
 88 \le \rho(2,8) \le 96, \qquad 56\le \rho(3,8)\le 60 .
 $$
-% TODO: références pour les minorants 88 et 56 et pour les valeurs de la table.
+conséquences de résultats récents combinés avec l'inégalité de Plotkin
+\begin{equation}\label{eq:plotkin}
+\rho(r,m)\le \rho(r,m-1)+\rho(r-1,m-1).
+\end{equation}
 
 
 \begin{table}[ht]
 \centering
-\caption{$\rho(r,m)$. En orange : cas non triviaux où
-$\rho(r,m)=\rho(r,m-1)+\rho(r-1,m-1)$. En gras : résultats récents
-\cite{Wang19,GKLW,GL23,RM19,HSS26,KGP26}.}
+	\caption{$\rho(r,m)$. Les cas \textcolor{plotkin}{non triviaux} pour $\rho(r,m)=\rho(r,m-1)+\rho(r-1,m-1)$
+	, les  résultats \textbf{récents} \cite{Wang19,GKLW,GL23,RM19,HSS26,KGP26}
+	et les \SPB{minorations} borne d'empilement des sphères.
+	}
 \label{tab:tab_rho}
 \begin{tabular}{c|ccccccccc}
 $r\backslash m$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
 \hline
 1 & 2 & \cellcolor{plotkin}6 & 12 & \cellcolor{plotkin}28 & 56 & \cellcolor{plotkin}120 & \textbf{242} & 496 & 996 \\
 2 & 1 & 2 & 6 & \cellcolor{plotkin}18 & \textbf{40} & \textbf{88}-96 & 196-216 & \textbf{408}-460 & 856-956 \\
-3 & 0 & 1 & 2 & \cellcolor{plotkin}8 & \textbf{20} & \textbf{56}-60 & 111-156 & \SPB{271}372 & \SPB{628}832 \\
-4 &  & 0 & 1 & 2 & 8 & \textbf{26} & 58-86 &  \SPB{161}242 &   \SPB{416}614 \\
-5 &  &  & 0 & 1 & 2 & \cellcolor{plotkin}10 & 28-36 & \SPB{76}122 & \SPB{227}364 \\
-6 &  &  &  & 0 & 1 & 2 & 10 & \SPB{27}46 & \SPB{98}168 \\
-7 &  &  &  &  & 0 & 1 & 2 & \cellcolor{plotkin}12 & \SPB{32}58 \\
+3 & 0 & 1 & 2 & \cellcolor{plotkin}8 & \textbf{20} & \textbf{56}-60 & 111-156 & \SPB{271}-372 & \SPB{628}-832 \\
+4 &  & 0 & 1 & 2 & 8 & \textbf{26} & 58-86 &  \SPB{161}-242 &   \SPB{416}-614 \\
+5 &  &  & 0 & 1 & 2 & \cellcolor{plotkin}10 & 28-36 & \SPB{76}-122 & \SPB{227}-364 \\
+6 &  &  &  & 0 & 1 & 2 & 10 & \SPB{27}-46 & \SPB{98}-168 \\
+7 &  &  &  &  & 0 & 1 & 2 & \cellcolor{plotkin}12 & \SPB{32}-58 \\
 8 &  &  &  &  &  & 0 & 1 & 2 & 12 \\
 \hline
 \end{tabular}
 \end{table}
-
-Dans la table, les minorations en bleu correspondent à la
-borne d'empilement des sphères.
-
-Les majorations ci-dessus sont des conséquences de l'inégalité de Plotkin
-\begin{equation}\label{eq:plotkin}
-\rho(r,m)\le \rho(r,m-1)+\rho(r-1,m-1),
-\end{equation}
-avec $\rho(1,7)=56$ \cite{MYK,HOU} et les valeurs obtenues récemment
-$\rho(2,7)=40$ \cite{Wang19} et $\rho(3,7)=20$ \cite{GKLW}
-(on a $40+56=96$ et $20+40=60$).
-
 \begin{remark}
 La connaissance de $\rho(r,m)$ n'implique pas celle des
-fonctions $r$-optimales. Le point clé de cet article est
+fonctions $r$-optimales. Le point clé de ce travail est
 d'identifier toutes les fonctions de $\boole(7)$ qui
 sont de non-linéarité quadratique $\rho(2,7)=40$, à équivalence près. Nous
 verrons que leur ensemble se résume à 4 classes : 1 cubique et 3 quartiques.
@@ -157,12 +154,9 @@ $$
 $$
 On conclut en choisissant $g$ meilleure approximation de $f_1+q_0$. Avec
 $q_0$ meilleure approximation de $f_0$, on obtient l'inégalité de
-Plotkin~\eqref{eq:plotkin}.
-
-\begin{definition}
-Une fonction $f\in\boole(m)$ est \emph{Plotkin-extrémale d'ordre $r$} si
-$\NL(r,f)=\rho(r,m-1)+\rho(r-1,m-1)$ (avec $\rho(0,m-1)=2^{m-2}$).
-\end{definition}
+Plotkin~\eqref{eq:plotkin}.  Nous dirons aue la fonction $f\in\boole(m)$ 
+est \emph{Plotkin-extrémale d'ordre $r$} quand elle
+sasifait à $\NL(r,f)=\rho(r,m-1)+\rho(r-1,m-1)$ (avec $\rho(0,m-1)=2^{m-2}$).
 
 La non-linéarité d'ordre $r$ est invariante par $\AGL(m,2)$, puisque
 $\rmc(r,m)$ est stable par cette action et que celle-ci préserve la distance de
@@ -203,23 +197,37 @@ $\agl s\in\AGL(m,2)$ tel que $\deg(g+f\circ\agl s)\le r$. Sur $\bst(s,t,m)$ on
 considère la $(s-1)$-équivalence, et $\clst(s,t,m)$ désigne un système de
 représentants des classes. Le nombre de classes est déterminé par la formule de
 Burnside et $\clst(s,t,m)$ s'obtient par descente à partir de
-$\clst(s+1,t,m)$.
-
-Nous sommes partis des stabilisateurs des 179 classes de $\bst(4,5,7)$ pour
+$\clst(s+1,t,m)$. Pour chaque représentant $f$ du niveau $r$, 
+le stabilisateur $H:=\stab(r,f)$ agit sur les formes de degré $r$.
+Les représentants du niveau $r-1$ sont les $f+u$, avec $u$ représentant 
+d’une orbite. 
+L'ordre du stabilisateur $s_u$ de $f+u$ s’obtient par la formule des 
+classes : $s_u = |H| / |O_u|$. Nous sommes partis des stabilisateurs des 179 classes de $\bst(4,5,7)$ pour
 obtenir un système de représentants de $\bst(3,5,7)$. % TODO: 179 classes mais 178 tableaux plus bas : à vérifier
 Le stabilisateur de $f\in\bst(4,5,7)$ est le sous-groupe $S$ composé des
 $\agl s$ tels que $\deg(f+f\circ\agl s)\le 3$. Les orbites de $\bst(3,5,7)$
-3-équivalentes à $f$ s'obtiennent par l'action de $S$ sur $\bst(3,3,7)$ donnée
+3-équivalente à  $f\in\bst(4,5,7)$ s'obtiennent en faisant agir sur $\bst(3,3,7)$ 
 par $c\mapsto c\circ\agl s+(f+f\circ\agl s)$ modulo $\rmc(2,7)$. Pour la
 réalisation, nous avons distingué deux situations suivant l'ordre de $S$.
+
+\begin{itemize}
+	\item Petits stabilisateurs. Les orbitres sont petites et nombreuses. La recherche des orbites est facilement parallèlisable,
+	les représentants sont les éléments qui minimise $c.\agl s$, pour $s\in\stab(3,f)$.
+	\item Grands stabilisateurs. Les orbites sont grandes et peu nombreuses. On parcourt  chaque, 
+		 et en marquant les éléments déjà visités par un parcours.
+\end{itemize}
 
 La méthode de descente est décrite dans \cite{VGPL}. Une description des
 $118\,140\,881\,980\approx 2^{36.78}$ classes est présentée sur la page du
 projet numérique \cite{GL26}, sous la forme de 178 tableaux de $2^{29}$ bits ;
-après compression, la donnée pèse moins d'un gigaoctet. % TODO: 178*2^29 bits < nombre de classes : à clarifier
+après compression, la donnée pèse moins d'un gigaoctet.  Ainsi,  pour lister
+les représentants correspondant  à  la classe $\numero(num)$, le lecteur
+décompresse le fichier \gzip(num) pour obtenir une table de $2^{32}$ octets,
+lu comme un tableau de bits, le bit $u$ est allumé si et seulement si 
+$u$ est un représentant de l'orbite.
 
 %=====================================================================
-\section{Fonctions de $\boole(7)$ de non-linéarité quadratique 40}\label{sec:nq40}
+\section{Fonctions de $\boole(7)$ de non-linéarité quadratique 38 et  40}\label{sec:nq40}
 
 \subsection{Orphelins}
 Les mots de poids minimal du translaté $f+\rmc(r,m)$ sont les \emph{leaders}
@@ -502,59 +510,6 @@ $r\backslash m$ & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
 \end{table}
 
 %=====================================================================
-\section{Remarques et compléments}
-
-\begin{remark}[Parité pour $\rmc(3,8)$]\label{rem:parite}
-L'argument de la proposition~\ref{prop:28b} ne conclut pas pour $(3,8)$ : si
-$\NL(3,f)=59$, une moitié est de non-linéarité cubique $19$ et l'autre de
-non-linéarité cubique $20$ et de degré au plus $4$, mais l'inégalité~\eqref{eq:base}
-donne seulement $19+40=59$ : il n'y a pas de contradiction.
-\end{remark}
-
-\begin{remark}[Cohérence pour $r=1$]
-Pour $r=1$ et $m=4,6,8$, le lemme~\ref{lem:extremal} dit que les restrictions
-aux hyperplans d'une fonction courbe sont de non-linéarité $\rho(1,m-1)$,
-c'est-à-dire $2,12,56$. C'est bien la valeur classique
-$2^{m-2}-2^{m/2-1}$ de la non-linéarité d'une restriction d'une fonction
-courbe à un hyperplan.
-\end{remark}
-
-\begin{remark}[Cas Plotkin-extrémaux de la table~\ref{tab:tab_rho}]
-Les $7$ cas non triviaux sont $(1,4)$, $(1,6)$, $(1,8)$, $(2,6)$, $(3,6)$,
-$(5,8)$ et $(7,10)$. Pour $r=m-3$, la borne est atteinte lorsque $m$ est pair
-($m=4,6,8,10$) et stricte lorsque $m$ est impair ($m=5,7,9$). Le
-théorème~\ref{thm:main} montre que $(2,8)$ et $(3,8)$ ne prolongent pas le cas
-$m=6$ ; $(2,7)$, $(3,7)$ et $(4,7)$ sont aussi stricts. Pour $r=1$, la borne
-cesse d'être atteinte à partir de $m=10$ : $\rho(1,9)=242<248$.
-\end{remark}
-
-\begin{remark}[Bornes voisines]
-Par \eqref{eq:plotkin}, les nouvelles valeurs donnent $\rho(2,9)\le 214$,
-$\rho(3,9)\le 153$ et $\rho(4,9)\le 85$ (au lieu de $216$, $156$ et $86$),
-et les améliorations en cascade de la table~\ref{tab:tab_rho2}. Dans la colonne
-$m=10$, $\rho(2,10)\le 456$ utilise aussi $\rho(1,9)=242$.
-\end{remark}
-
-\begin{remark}[Vérifiabilité]
-Deux niveaux de vérification sont à distinguer. (1) Que les $51$ classes ont
-une non-linéarité quadratique au moins $38$, que les $4$ classes ont $40$ et
-que la table~\ref{tab:4classes} est correcte : un tiers peut le contrôler
-rapidement si nous publions les représentants et leurs leaders (c'est aussi
-une preuve que le fait~\ref{fait:quintiques} se lit sur les $14$ quintiques :
-aucune n'a $40$). (2) Qu'aucune classe ne manque : cela repose sur
-l'exhaustivité de la classification de $\bst(3,5,7)$ et du filtre de Prange sur
-$1{,}18\cdot 10^{11}$ classes ; un calcul indépendant, ou un contrôle interne
-de type Burnside par niveau, serait le plus convaincant.
-\end{remark}
-
-\begin{remark}[Terminologie]
-« Plotkin » désigne ici l'inégalité~\eqref{eq:plotkin}, issue de la
-construction $(u\,\|\,u+v)$, et non la borne de Plotkin sur la taille des
-codes. Une fonction Plotkin-extrémale est dite optimale en non-linéarité si
-elle atteint $\rho(r,m)$ ; ce sont deux notions distinctes.
-\end{remark}
-
-%=====================================================================
 \begin{thebibliography}{99}
 
 \bibitem{KGP26} K.~Khoruzhii, P.~Gelß, S.~Pokutta, \emph{The weight distribution
@@ -582,7 +537,8 @@ elle atteint $\rho(r,m)$ ; ce sont deux notions distinctes.
  \texttt{http://langevin.univ-tln.fr/project/B357/B357.html}
 \bibitem{GL23} V.~Gillot, P.~Langevin, \emph{Covering radius of $\rmc(4,8)$},
  arXiv:2305.03493, 2023 ; projet agl8, \texttt{langevin.univ-tln.fr/project/agl8}.
-\bibitem{VGPL} V.~Gillot, P.~Langevin, \emph{à compléter} (méthode de descente).
+\bibitem{VGPL} V.~Gillot, P.~Langevin, \emph{Classification of some cosets of Reed-Muller codes},
+	Cryptography and Communications  \textbf{15}, { 1129--1137 }, 2023.
 \bibitem{LL05} P.~Langevin, G.~Leander, \emph{Classification of Boolean quartic forms in eight
  variables}, in \emph{Boolean Functions in Cryptology and Information Security}, NATO Sci.
  Peace Secur. Ser. D \textbf{18}, 139--147, 2005.
