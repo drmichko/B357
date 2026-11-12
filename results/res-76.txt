@@ -1,0 +1,20 @@
+
+#12 members have NL_2 >=36 :
+#orbit=467301 count=467301  12
+#prange: nps=1024  tests exacts=115656 (24.7498% des candidats)
+#runtime : 12.163091 secondes (mur)
+#runtime : 19.677729 secondes (mur)
+Using no 76  (threads: 40)
+Using no 76  (threads: 72)
+anf=abc+abd+acd+bcd+ace+acf+bcf+adf+bef+def+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+bcd+ace+bce+bde+cde+bcf+bdf+cdf+bef+cef+def+acdef+bcg+cdg+aeg+abdeg+afg+abcfg
+anf=abc+abd+bde+abf+bcf+adf+bdf+cdf+bef+cef+acdef+bcg+bdg+cdg+aeg+abdeg+abcfg
+anf=abc+bcd+ade+bcf+adf+bdf+aef+cef+acdef+cdg+aeg+beg+abdeg+bfg+abcfg
+anf=abd+acd+ace+ade+bde+acf+bcf+aef+cef+def+acdef+cdg+aeg+beg+abdeg+bfg+abcfg
+anf=abe+ace+ade+bde+abf+adf+cdf+acdef+bcg+adg+abdeg+abcfg
+anf=abe+ace+bce+ade+abf+acf+bdf+acdef+abg+cdg+abdeg+abcfg
+anf=abe+bce+ade+bde+bdf+aef+cef+acdef+bcg+cdg+aeg+abdeg+afg+abcfg
+anf=bcd+abe+ace+ade+bde+abf+adf+cdf+acdef+bcg+adg+abdeg+abcfg
+anf=bcd+bce+ade+acf+bcf+cdf+bef+cef+acdef+abg+bcg+beg+ceg+abdeg+abcfg+dfg
+anf=bcd+bce+ade+bde+acf+cdf+bef+acdef+abg+bcg+ceg+abdeg+abcfg+dfg
+anf=bcd+bce+ade+cde+acf+bef+acdef+ceg+abdeg+abcfg+dfg

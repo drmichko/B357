@@ -1,0 +1,33 @@
+
+#25 members have NL_2 >=36 :
+#orbit=18533 count=18533  25
+#prange: nps=1024  tests exacts=4511 (24.3404% des candidats)
+#runtime : 1.839524 secondes (mur)
+#runtime : 1.972520 secondes (mur)
+Using no 75  (threads: 40)
+Using no 75  (threads: 72)
+anf=abc+abd+acd+ace+bde+abde+cde+acf+bcf+bdf+cdf+def+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+ace+ade+abde+cde+bdf+cdf+bef+acdef+bcg+bdg+cdg+aeg+abdeg+abcfg
+anf=abc+abd+ace+bde+abde+cde+acf+bcf+cdf+def+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+bcd+bce+bde+abde+acf+bcf+adf+bdf+cef+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+bcd+bde+abde+bcf+adf+bef+cef+acdef+abg+bdg+cdg+aeg+abdeg+abcfg
+anf=abc+abd+bce+ade+abde+cde+bcf+adf+bdf+cef+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+acd+abe+bce+bde+abde+acf+bcf+cef+def+acdef+bcg+bdg+deg+abdeg+afg+abcfg
+anf=abc+acd+ade+abde+cde+bcf+bdf+cef+acdef+cdg+beg+abdeg+abcfg
+anf=abc+acd+ade+bde+abde+bcf+bdf+cef+acdef+cdg+beg+abdeg+abcfg
+anf=abc+acd+bce+ade+abde+cde+bcf+bdf+cef+acdef+cdg+beg+abdeg+abcfg
+anf=abc+acd+bce+ade+bde+abde+bcf+bdf+cef+acdef+cdg+beg+abdeg+abcfg
+anf=abc+acd+bce+ade+bde+abde+bdf+cdf+cef+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+bcd+abde+acf+bdf+bef+cef+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abc+bcd+bce+bde+abde+bcf+adf+bdf+cef+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abd+acd+abe+bce+bde+abde+cde+adf+bdf+bef+cef+def+acdef+bcg+bdg+deg+abdeg+afg+abcfg
+anf=abd+acd+ace+bde+abde+cde+bcf+adf+bdf+cdf+def+acdef+cdg+beg+abdeg+afg+abcfg
+anf=abd+bcd+bce+abde+abf+acf+bdf+cdf+aef+acdef+bdg+cdg+aeg+abdeg+abcfg
+anf=abd+bcd+bce+bde+abde+cde+abf+acf+bdf+cdf+aef+acdef+bdg+cdg+aeg+abdeg+abcfg
+anf=abe+ace+ade+bde+abde+abf+bcf+cdf+acdef+bcg+adg+abdeg+abcfg
+anf=abe+bce+bde+abde+cde+abf+acf+bcf+adf+acdef+bcg+adg+abdeg+abcfg
+anf=abe+bde+abde+cde+abf+acf+bcf+adf+acdef+bcg+adg+abdeg+abcfg
+anf=acd+bcd+abe+bce+abde+abf+bdf+bef+cef+def+acdef+abg+cdg+beg+deg+abdeg+bfg+cfg+abcfg
+anf=ace+bde+abde+cde+bcf+adf+cdf+def+acdef+cdg+beg+abdeg+afg+abcfg
+anf=bcd+abe+ace+ade+bde+abde+abf+bcf+cdf+acdef+bcg+adg+abdeg+abcfg
+anf=bcd+abe+bde+abde+cde+abf+acf+bcf+adf+acdef+bcg+adg+abdeg+abcfg

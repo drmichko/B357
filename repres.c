@@ -118,7 +118,7 @@ int main(int argc, char *argv[])
     aglGroup grp = NULL;
     while ( ( h = loadaglboolesize(src, &grp, &grpSize) )){
 		item++;
-		if (  item == 179  ) 
+		if (  item == 1  ) 
 			total += doit( item, grpSize, h , grp );
 		aglfreeGroup( grp );
 		free(h);

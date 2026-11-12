@@ -1,0 +1,81 @@
+
+#73 members have NL_2 >=36 :
+#orbit=36090230 count=36090230  73
+#prange: nps=1024  tests exacts=9061928 (25.1091% des candidats)
+#runtime : 1782.775883 secondes (mur)
+#runtime : 989.566786 secondes (mur)
+Using no 67  (threads: 40)
+Using no 67  (threads: 72)
+anf=abc+abd+abe+bce+abce+bde+abde+cde+abf+bdf+abdf+cef+def+cdef+acdef+acg+bdg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+acd+abce+abde+abf+adf+abdf+aef+cdef+acdef+abg+bcg+beg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+abd+acd+abe+abce+abde+abf+adf+abdf+aef+cdef+acdef+abg+bcg+beg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+abd+acd+abe+abce+bde+abde+adf+abdf+cdf+bef+def+cdef+acdef+abg+bcg+bdg+deg+abdeg+afg+abcfg
+anf=abc+abd+acd+abe+abce+bde+abde+cde+abf+bcf+abdf+aef+cef+cdef+acdef+abg+cdg+ceg+deg+abdeg+abcfg+dfg
+anf=abc+abd+acd+abe+ace+abce+abde+abf+bcf+abdf+aef+cdef+acdef+abg+ceg+deg+abdeg+abcfg+dfg
+anf=abc+abd+acd+abe+ace+bce+abce+abde+cde+abdf+cdf+cef+cdef+acdef+acg+bdg+beg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+acd+abe+bce+abce+ade+bde+abde+bcf+abdf+aef+cdef+acdef+acg+bcg+bdg+beg+ceg+abdeg+afg+abcfg
+anf=abc+abd+acd+ace+abce+ade+bde+abde+cde+abf+adf+bdf+abdf+aef+cef+cdef+acdef+cdg+beg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+acd+ace+abce+bde+abde+acf+bcf+abdf+def+cdef+acdef+acg+adg+cdg+beg+ceg+deg+abdeg+abcfg+dfg
+anf=abc+abd+acd+ace+bce+abce+ade+abde+cde+bdf+abdf+cdf+aef+bef+def+cdef+acdef+cdg+beg+deg+abdeg+cfg+abcfg
+anf=abc+abd+acd+bcd+abe+ace+bce+abce+ade+abde+cde+abf+abdf+bef+cdef+acdef+cdg+beg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+acd+bcd+ace+abce+ade+abde+cde+bdf+abdf+cdf+bef+cef+cdef+acdef+abg+acg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+abd+acd+bcd+ace+abce+ade+bde+abde+cde+bcf+adf+abdf+cef+cdef+acdef+bcg+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+acd+bcd+bce+abce+abde+acf+adf+bdf+abdf+cef+def+cdef+acdef+abg+bcg+bdg+deg+abdeg+afg+abcfg
+anf=abc+abd+acd+bcd+bce+abce+abde+acf+bcf+abdf+bef+cef+def+cdef+acdef+abg+bcg+bdg+aeg+deg+abdeg+afg+abcfg
+anf=abc+abd+acd+bcd+bce+abce+abde+cde+bcf+abdf+cdf+aef+bef+def+cdef+acdef+bcg+bdg+beg+ceg+abdeg+afg+abcfg
+anf=abc+abd+bcd+abce+abde+abdf+aef+cdef+acdef+abg+cdg+aeg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+bcd+abe+ace+abce+abde+cde+adf+abdf+cdf+aef+cef+cdef+acdef+bdg+beg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abc+abd+bcd+abe+bce+abce+ade+abde+abf+acf+abdf+bef+cdef+acdef+cdg+ceg+deg+abdeg+afg+abcfg+dfg
+anf=abc+abd+bcd+abe+bce+abce+ade+bde+abde+adf+bdf+abdf+cdf+bef+cdef+acdef+bdg+ceg+abdeg+afg+abcfg
+anf=abc+abd+bcd+bce+abce+abde+cde+adf+abdf+cdf+aef+bef+def+cdef+acdef+acg+bcg+cdg+beg+abdeg+afg+abcfg
+anf=abc+abd+bce+abce+ade+bde+abde+cde+acf+bcf+bdf+abdf+cdf+bef+cef+cdef+acdef+abg+cdg+aeg+abdeg+abcfg
+anf=abc+abe+abce+abde+abf+acf+adf+bdf+abdf+cdf+aef+bef+def+cdef+acdef+abg+acg+bcg+beg+deg+abdeg+abcfg
+anf=abc+abe+abce+bde+abde+cde+bcf+abdf+aef+bef+def+cdef+acdef+acg+bcg+bdg+beg+ceg+abdeg+afg+abcfg
+anf=abc+abe+bce+abce+abde+adf+abdf+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abc+acd+abce+bde+abde+cde+abdf+aef+bef+cef+cdef+acdef+abg+bcg+beg+deg+abdeg+afg+abcfg
+anf=abc+acd+abe+abce+abde+abdf+bef+cdef+acdef+abg+acg+bdg+ceg+abdeg+afg+abcfg
+anf=abc+acd+abe+ace+abce+ade+abde+abf+adf+bdf+abdf+cdf+aef+bef+cef+cdef+acdef+bcg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abc+acd+abe+bce+abce+abde+adf+abdf+aef+cdef+acdef+abg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+acd+bcd+abce+ade+abde+cde+abdf+cdf+bef+cdef+acdef+abg+adg+ceg+deg+abdeg+abcfg+dfg
+anf=abc+acd+bcd+abe+abce+abde+cde+acf+bcf+bdf+abdf+cef+cdef+acdef+bcg+aeg+deg+abdeg+afg+abcfg
+anf=abc+acd+bcd+abe+abce+ade+abde+cde+adf+abdf+bef+cef+cdef+acdef+abg+adg+cdg+beg+deg+abdeg+afg+cfg+abcfg
+anf=abc+acd+bcd+abe+abce+bde+abde+abf+adf+abdf+cdf+aef+cef+cdef+acdef+abg+bcg+bdg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+acd+bcd+abe+bce+abce+bde+abde+bdf+abdf+bef+cef+def+cdef+acdef+abg+acg+bdg+ceg+abdeg+afg+abcfg
+anf=abc+acd+bcd+ace+abce+abde+adf+abdf+cdf+bef+def+cdef+acdef+abg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+acd+bcd+ace+bce+abce+abde+cde+bcf+adf+bdf+abdf+cdf+aef+bef+def+cdef+acdef+bcg+adg+beg+deg+abdeg+afg+abcfg
+anf=abc+acd+bcd+bce+abce+abde+acf+bcf+adf+bdf+abdf+cdf+bef+cef+def+cdef+acdef+bcg+bdg+aeg+deg+abdeg+abcfg
+anf=abc+ace+bce+abce+ade+abde+abf+bcf+abdf+aef+bef+cdef+acdef+acg+cdg+beg+ceg+deg+abdeg+abcfg+dfg
+anf=abc+bcd+abe+ace+bce+abce+ade+abde+cde+adf+abdf+cdf+aef+cef+cdef+acdef+abg+acg+bdg+beg+ceg+deg+abdeg+cfg+abcfg
+anf=abc+bcd+abe+bce+abce+ade+bde+abde+abf+bcf+abdf+cdf+cef+def+cdef+acdef+abg+acg+bcg+cdg+beg+ceg+deg+abdeg+afg+abcfg+dfg
+anf=abc+bce+abce+ade+abde+cde+bcf+abdf+aef+bef+cef+def+cdef+acdef+abg+bcg+bdg+ceg+abdeg+afg+abcfg
+anf=abd+abe+bce+abce+bde+abde+cde+acf+abdf+aef+bef+cef+cdef+acdef+bcg+adg+beg+deg+abdeg+afg+abcfg
+anf=abd+acd+abe+abce+bde+abde+cde+abf+bcf+adf+abdf+cdf+aef+cef+cdef+acdef+abg+adg+ceg+abdeg+abcfg
+anf=abd+acd+abe+ace+abce+abde+cde+adf+bdf+abdf+aef+bef+cef+def+cdef+acdef+acg+bcg+beg+deg+abdeg+afg+abcfg
+anf=abd+acd+ace+abce+abde+cde+abdf+bef+cef+cdef+acdef+abg+bcg+aeg+deg+abdeg+afg+abcfg
+anf=abd+acd+bcd+abe+abce+ade+bde+abde+bcf+adf+abdf+cdf+cef+cdef+acdef+abg+bcg+bdg+beg+ceg+abdeg+afg+abcfg
+anf=abd+acd+bcd+abe+ace+bce+abce+bde+abde+cde+abf+adf+bdf+abdf+cef+def+cdef+acdef+acg+bdg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abd+acd+bcd+abe+bce+abce+abde+cde+acf+adf+bdf+abdf+aef+cef+def+cdef+acdef+bcg+bdg+ceg+abdeg+afg+abcfg
+anf=abd+acd+bcd+bce+abce+ade+bde+abde+cde+acf+bcf+adf+abdf+cef+cdef+acdef+acg+bcg+cdg+beg+abdeg+afg+abcfg
+anf=abd+bcd+abce+ade+abde+abf+adf+abdf+aef+cdef+acdef+abg+cdg+beg+deg+abdeg+cfg+abcfg
+anf=abd+bcd+abce+ade+abde+cde+abdf+aef+cdef+acdef+abg+cdg+aeg+deg+abdeg+afg+cfg+abcfg
+anf=abd+bcd+abe+abce+abde+cde+acf+bdf+abdf+cef+cdef+acdef+abg+bcg+aeg+deg+abdeg+afg+abcfg
+anf=abd+bcd+abe+ace+bce+abce+abde+cde+bdf+abdf+cdf+cef+cdef+acdef+bcg+bdg+deg+abdeg+afg+abcfg
+anf=abd+bcd+ace+abce+ade+abde+abdf+cef+cdef+acdef+acg+cdg+beg+deg+abdeg+afg+cfg+abcfg
+anf=abd+bcd+ace+bce+abce+abde+abf+bdf+abdf+bef+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abd+bcd+bce+abce+ade+abde+abf+acf+abdf+cdef+acdef+abg+cdg+beg+ceg+deg+abdeg+abcfg+dfg
+anf=abd+bce+abce+ade+bde+abde+cde+acf+bdf+abdf+cdf+aef+cef+cdef+acdef+abg+acg+bcg+bdg+beg+ceg+abdeg+afg+abcfg
+anf=abe+ace+abce+ade+bde+abde+abf+bdf+abdf+cdf+cdef+acdef+abg+bcg+adg+abdeg+abcfg
+anf=abe+bce+abce+abde+abf+bdf+abdf+cdf+aef+cef+cdef+acdef+bcg+adg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=abe+bce+abce+ade+abde+cde+abdf+cef+cdef+acdef+abg+cdg+aeg+deg+abdeg+afg+cfg+abcfg
+anf=acd+abce+ade+abde+acf+abdf+cdef+acdef+acg+adg+cdg+beg+abdeg+abcfg
+anf=acd+abe+ace+abce+bde+abde+cde+bcf+adf+abdf+cdf+aef+bef+cdef+acdef+bcg+bdg+deg+abdeg+afg+abcfg
+anf=acd+bcd+ace+abce+abde+bcf+abdf+cdf+bef+def+cdef+acdef+bcg+bdg+aeg+deg+abdeg+afg+abcfg
+anf=acd+bcd+ace+bce+abce+ade+abde+adf+abdf+cdf+bef+def+cdef+acdef+abg+ceg+deg+abdeg+cfg+abcfg
+anf=acd+bcd+ace+bce+abce+ade+bde+abde+cde+acf+bcf+abdf+bef+cef+cdef+acdef+abg+cdg+beg+abdeg+afg+abcfg
+anf=acd+bce+abce+abde+adf+abdf+aef+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=ace+abce+abde+acf+bcf+bdf+abdf+cdf+def+cdef+acdef+bcg+deg+abdeg+afg+abcfg
+anf=ace+abce+ade+abde+cde+acf+bcf+abdf+bef+cef+def+cdef+acdef+abg+acg+cdg+beg+ceg+deg+abdeg+afg+abcfg+dfg
+anf=bcd+abce+ade+abde+abdf+cdf+cef+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=bcd+abce+ade+abde+abf+bdf+abdf+cdf+bef+cef+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=bcd+abe+bce+abce+ade+abde+abdf+cdf+cef+cdef+acdef+abg+acg+adg+aeg+ceg+deg+abdeg+afg+cfg+abcfg
+anf=bcd+ace+abce+ade+bde+abde+acf+abdf+cdf+aef+cef+cdef+acdef+abg+cdg+beg+ceg+deg+abdeg+abcfg+dfg

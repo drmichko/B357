@@ -1,0 +1,52 @@
+
+Using no 137  (threads: 40)
+
+#43 members have NL_2 >=36 :
+
+anf=acd+bcde+abf+acdf+cef+abcef+bcg+adg+abcdg+abeg
+anf=bcd+bcde+abf+acdf+cef+abcef+bcg+adg+abcdg+abeg
+anf=abc+bcde+bdf+cdf+acdf+cef+abcef+cdg+abcdg+beg+abeg
+anf=abc+cde+bcde+adf+cdf+acdf+bef+abcef+bdg+abcdg+abeg+afg
+anf=abc+acd+ade+cde+bcde+adf+cdf+acdf+bef+abcef+bdg+abcdg+abeg+afg
+anf=abc+acd+abe+bde+cde+bcde+adf+acdf+cef+abcef+bdg+abcdg+abeg+afg
+anf=abc+acd+abe+bde+cde+bcde+adf+bdf+acdf+cef+abcef+bdg+abcdg+abeg+afg
+anf=abc+acd+bcd+abe+cde+bcde+adf+cdf+acdf+cef+abcef+bdg+abcdg+abeg+afg
+anf=abc+acd+bcd+abe+cde+bcde+adf+bdf+cdf+acdf+cef+abcef+bdg+abcdg+abeg+afg
+anf=abc+abd+bce+ade+bde+cde+bcde+bdf+cdf+acdf+bef+cef+abcef+abcdg+aeg+beg+abeg+afg
+anf=abc+abd+bcd+bce+bde+cde+bcde+bdf+cdf+acdf+bef+abcef+bdg+abcdg+abeg+ceg+afg
+anf=abd+acd+ade+cde+bcde+bdf+cdf+acdf+aef+bef+abcef+bdg+abcdg+abeg+ceg+afg
+anf=abc+bde+bcde+acdf+cef+abcef+cdg+abcdg+abeg+bfg
+anf=abc+acd+ade+bcde+bdf+acdf+cef+abcef+cdg+abcdg+abeg+bfg
+anf=acd+ace+ade+bde+bcde+cdf+acdf+abcef+acg+abcdg+beg+abeg+bfg
+anf=acd+bcd+ace+ade+bde+bcde+cdf+acdf+abcef+acg+abcdg+beg+abeg+bfg
+anf=abc+abd+abe+ade+bde+cde+bcde+adf+acdf+cef+abcef+cdg+abcdg+beg+abeg+bfg
+anf=abc+abe+ade+bcde+cdf+acdf+cef+abcef+cdg+abcdg+beg+abeg+bfg
+anf=abc+abe+ade+bcde+bdf+cdf+acdf+cef+abcef+cdg+abcdg+beg+abeg+bfg
+anf=abc+cde+bcde+bdf+acdf+bef+cef+abcef+cdg+abcdg+beg+abeg+bfg
+anf=abc+abd+acd+ade+bde+cde+bcde+adf+cdf+acdf+bef+cef+abcef+cdg+abcdg+beg+abeg+bfg
+anf=abc+ade+bde+cde+bcde+adf+cdf+acdf+abcef+abcdg+aeg+beg+abeg+bfg
+anf=abc+acd+bcde+adf+cdf+acdf+cef+abcef+cdg+abcdg+aeg+beg+abeg+bfg
+anf=abc+acd+bcd+ace+ade+cde+bcde+adf+acdf+bef+cef+abcef+cdg+abcdg+aeg+beg+abeg+bfg
+anf=abc+acd+ade+bde+cde+bcde+acdf+abcef+abcdg+abeg+ceg+bfg
+anf=abc+abd+acd+ade+bde+cde+bcde+adf+acdf+abcef+abcdg+abeg+ceg+bfg
+anf=abc+ace+bde+bcde+cdf+acdf+aef+abcef+abcdg+abeg+ceg+bfg
+anf=abc+bde+bcde+cdf+acdf+bef+abcef+abcdg+abeg+ceg+bfg
+anf=abc+abd+ade+cde+bcde+adf+acdf+aef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+abe+ade+bde+cde+bcde+adf+acdf+aef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+abd+bcde+bdf+acdf+aef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+bcde+adf+bdf+acdf+aef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+acd+abe+ace+ade+cde+bcde+bdf+cdf+acdf+aef+bef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+abd+acd+bcde+bdf+acdf+cef+abcef+adg+abcdg+abeg+ceg+bfg
+anf=abc+abe+ace+bde+cde+bcde+adf+cdf+acdf+aef+bef+abcef+cdg+abcdg+abeg+ceg+bfg
+anf=abc+acd+ade+bcde+bdf+acdf+cef+abcef+cdg+abcdg+abeg+ceg+bfg
+anf=bcd+abe+ade+bde+bcde+acdf+aef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+acd+ace+bcde+adf+cdf+acdf+aef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+abd+acd+abe+ace+ade+bde+cde+bcde+bdf+cdf+acdf+aef+bef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+acd+bde+bcde+adf+acdf+aef+cef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+cde+bcde+adf+bdf+acdf+aef+cef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+acd+bcd+ade+bcde+adf+acdf+bef+cef+abcef+adg+cdg+abcdg+abeg+ceg+bfg
+anf=abc+abd+bcd+ade+cde+bcde+bcf+acdf+aef+abcef+acg+abcdg+aeg+beg+abeg+dfg
+#orbit=197480 count=197480  43
+#prange: nps=1024  tests exacts=47412 (24.0085% des candidats)
+
+#runtime : 16.700831 secondes (mur)

@@ -1,0 +1,13 @@
+
+Using no 147  (threads: 40)
+
+#4 members have NL_2 >=36 :
+
+anf=ace+bce+bde+bcf+adf+abcef+abg+abcdg
+anf=acd+bcd+bde+bcf+aef+abcef+abg+abcdg
+anf=abe+bce+cde+bdf+abcef+bcg+adg+abcdg
+anf=abd+ace+bce+bde+bcf+abcef+def+abcdg+beg+afg
+#orbit=510 count=510  4
+#prange: nps=1024  tests exacts=78 (15.2941% des candidats)
+
+#runtime : 0.773865 secondes (mur)

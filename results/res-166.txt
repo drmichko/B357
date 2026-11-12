@@ -1,0 +1,21 @@
+
+Using no 166  (threads: 40)
+
+#12 members have NL_2 >=36 :
+
+anf=abe+abcde+acf+bcf+bdf+cdef+bcg+adg+abfg
+anf=abe+cde+abcde+acf+bcf+bdf+cdef+bcg+adg+abfg
+anf=acd+abe+abcde+acf+cdf+cdef+bcg+adg+abfg
+anf=ace+bce+bde+abcde+bcf+adf+cdef+cdg+abfg
+anf=abc+ace+bce+bde+abcde+bcf+adf+cdef+cdg+abfg
+anf=abc+bce+ade+abcde+bdf+cef+cdef+acg+cdg+abfg
+anf=abc+abd+ace+bce+ade+abcde+bdf+cef+cdef+acg+cdg+abfg
+anf=abd+bcd+ace+bde+abcde+cdef+bcg+cdg+aeg+abfg
+anf=abc+abd+bce+ade+abcde+acf+bef+cef+cdef+bcg+cdg+aeg+abfg
+anf=abc+abd+bcd+ace+bce+abcde+bdf+bef+def+cdef+bcg+cdg+aeg+abfg
+anf=bcd+ace+ade+cde+abcde+adf+cdef+deg+abfg+cfg
+anf=bcd+bce+ade+cde+abcde+cdf+cdef+acg+bdg+aeg+deg+abfg+cfg
+#orbit=290524 count=290524  12
+#prange: nps=1024  tests exacts=73868 (25.4258% des candidats)
+
+#runtime : 83.169052 secondes (mur)

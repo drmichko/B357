@@ -1,0 +1,34 @@
+
+Using no 116  (threads: 40)
+
+#25 members have NL_2 >=36 :
+
+anf=abd+bcd+bde+bcde+acf+bcf+cdf+abcef+def+adef+bcg+adg+abcdg+beg+aceg+abfg
+anf=bcd+abe+cde+bcde+acf+bcf+cdf+abcef+def+adef+adg+abcdg+ceg+aceg+abfg
+anf=abd+bcd+bce+cde+bcde+bcf+cdf+aef+bef+abcef+adef+bcg+abcdg+aceg+deg+abfg
+anf=bcd+abe+bce+bcde+acf+adf+bdf+cef+abcef+def+adef+bcg+abcdg+aceg+deg+abfg
+anf=abc+acd+abe+bce+bde+bcde+abf+bcf+bdf+cef+abcef+adef+cdg+abcdg+beg+aceg+deg+abfg
+anf=abc+abd+bcd+bce+bcde+bcf+cdf+aef+bef+abcef+adef+bcg+abcdg+ceg+aceg+deg+abfg
+anf=abc+abd+acd+bcd+abe+bce+bde+cde+bcde+bdf+cef+abcef+adef+bcg+abcdg+ceg+aceg+deg+abfg
+anf=abc+abd+acd+abe+bde+bcde+bef+cef+abcef+adef+bcg+abcdg+ceg+aceg+deg+abfg
+anf=abd+bcd+abe+bcde+abf+acf+bcf+bdf+cdf+abcef+def+adef+bcg+abcdg+ceg+aceg+deg+abfg
+anf=acd+bcd+abe+bce+cde+bcde+bdf+cef+abcef+def+adef+bcg+abcdg+ceg+aceg+deg+abfg
+anf=abd+acd+bcd+bde+bcde+acf+bcf+cdf+bef+abcef+adef+bcg+cdg+abcdg+ceg+aceg+deg+abfg
+anf=abc+abd+bcd+ace+bde+bcde+acf+bcf+cdf+bef+abcef+adef+bcg+cdg+abcdg+ceg+aceg+deg+abfg
+anf=abc+abd+acd+bce+cde+bcde+acf+bcf+cdf+bef+abcef+adef+bcg+cdg+abcdg+ceg+aceg+deg+abfg
+anf=abd+acd+bcd+abe+ace+ade+cde+bcde+acf+adf+bdf+abcef+def+adef+adg+abcdg+ceg+aceg+bfg+abfg
+anf=abc+acd+ace+ade+cde+bcde+acf+adf+abcef+def+adef+bcg+abcdg+beg+ceg+aceg+bfg+abfg
+anf=abc+acd+ade+bde+bcde+bcf+bdf+bef+abcef+adef+bdg+abcdg+aceg+abfg+cfg
+anf=abc+ace+bce+cde+bcde+abcef+def+adef+bcg+adg+abcdg+beg+aceg+abfg+cfg
+anf=abc+bce+ade+cde+bcde+abcef+def+adef+bcg+adg+abcdg+beg+aceg+abfg+cfg
+anf=abd+acd+abe+ace+bde+cde+bcde+bcf+abcef+def+adef+abcdg+beg+ceg+aceg+deg+abfg+cfg
+anf=abc+acd+bce+ade+bde+bcde+cdf+cef+abcef+def+adef+abcdg+beg+ceg+aceg+deg+abfg+cfg
+anf=abd+acd+abe+ace+bce+bde+cde+bcde+bcf+adf+cdf+cef+abcef+def+adef+bcg+adg+abcdg+aceg+abfg+efg
+anf=abc+abe+ace+ade+bde+bcde+abf+acf+bdf+bef+abcef+def+adef+bcg+cdg+abcdg+aceg+abfg+efg
+anf=abc+abe+ace+bcde+abf+acf+bdf+cdf+bef+abcef+def+adef+bcg+cdg+abcdg+aceg+abfg+efg
+anf=abc+bcd+abe+bce+bde+cde+bcde+abf+acf+adf+bdf+cdf+abcef+adef+bcg+adg+cdg+abcdg+aceg+abfg+efg
+anf=abc+abd+acd+ace+bcde+bcf+bdf+cdf+abcef+def+adef+bcg+cdg+abcdg+aceg+abfg+cfg+efg
+#orbit=8470464 count=8470464  25
+#prange: nps=1024  tests exacts=2063677 (24.3632% des candidats)
+
+#runtime : 494.205679 secondes (mur)

@@ -1,0 +1,53 @@
+
+Using no 175  (threads: 40)
+
+#44 members have NL_2 >=36 :
+
+anf=abe+cde+abcde+bcf+abdf+abcg+adg
+anf=abe+ade+cde+abcde+bcf+adf+abdf+abcg+adg
+anf=cde+abcde+bcf+abdf+aef+abcg+adg
+anf=bcd+bce+cde+abcde+bcf+abdf+aef+abcg+adg
+anf=bce+abcde+abdf+cdf+aef+abcg+adg
+anf=bde+abcde+abdf+cdf+aef+abcg+adg
+anf=bcd+bce+bde+abcde+abdf+cdf+aef+abcg+adg
+anf=bcd+ace+abcde+abdf+bef+abcg+adg
+anf=bcd+abcde+acf+adf+abdf+bef+abcg+adg
+anf=cde+abcde+acf+adf+abdf+bef+abcg+adg
+anf=bcd+abe+abcde+abdf+cef+abcg+adg
+anf=bcd+abe+ade+abcde+adf+abdf+cef+abcg+adg
+anf=abe+abcde+acf+bcf+bdf+abdf+bcg+abcg+adg
+anf=abe+abcde+abdf+cef+bcg+abcg+adg
+anf=bde+abcde+bcf+bdf+abdf+aef+abcg+cdg
+anf=bcd+abcde+acf+abdf+bef+abcg+aeg
+anf=cde+abcde+acf+abdf+bef+abcg+aeg
+anf=acd+bcd+abcde+bcf+abdf+bef+abcg+aeg
+anf=bcd+abcde+acf+bcf+adf+abdf+bef+abcg+aeg
+anf=cde+abcde+acf+bcf+adf+abdf+bef+abcg+aeg
+anf=acd+bde+abcde+abdf+cef+abcg+aeg
+anf=cde+abcde+acf+bcf+abdf+bef+abcg+bdg+aeg
+anf=cde+abcde+acf+adf+abdf+bef+abcg+bdg+aeg
+anf=acd+bcd+cde+abcde+acf+adf+abdf+bef+abcg+bdg+aeg
+anf=acd+abcde+abdf+cef+abcg+bdg+aeg
+anf=acd+bde+abcde+abdf+cef+abcg+bdg+aeg
+anf=acd+abcde+bdf+abdf+cef+abcg+bdg+aeg
+anf=acd+bde+abcde+bdf+abdf+cef+abcg+bdg+aeg
+anf=bcd+abcde+acf+adf+abdf+def+abcg+adg+ceg
+anf=bcd+abe+abcde+acf+adf+abdf+def+abcg+adg+ceg
+anf=bcd+abe+abcde+adf+abdf+cef+def+abcg+adg+ceg
+anf=acd+abe+abcde+bcf+abdf+def+abcg+afg
+anf=acd+bcd+abe+abcde+bcf+bdf+abdf+bcg+abcg+afg
+anf=acd+bcd+abe+abcde+bcf+bdf+abdf+abcg+bdg+afg
+anf=acd+ace+abcde+abdf+cdf+bef+abcg+bdg+afg
+anf=bcd+ace+abcde+abdf+cdf+bef+abcg+bdg+afg
+anf=ace+bde+abcde+abdf+cdf+bef+abcg+bdg+afg
+anf=ace+ade+bde+abcde+abdf+cdf+bef+abcg+bdg+afg
+anf=acd+abe+bde+abcde+abdf+def+abcg+bdg+afg
+anf=acd+bcd+abe+bde+abcde+bcf+abdf+def+abcg+bdg+afg
+anf=abe+cde+abcde+bdf+abdf+cef+abcg+cdg+afg
+anf=abe+ade+cde+abcde+bdf+abdf+cef+abcg+cdg+afg
+anf=bcd+abe+abcde+abdf+cef+def+abcg+deg+afg
+anf=acd+bcd+bce+abcde+abdf+abcg+bdg+aeg+cfg
+#orbit=4002 count=4002  44
+#prange: nps=1024  tests exacts=803 (20.0650% des candidats)
+
+#runtime : 2.284820 secondes (mur)
