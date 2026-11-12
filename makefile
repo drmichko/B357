@@ -13,6 +13,9 @@ endif
 
 all : prange.exe onthefly.exe zipcheck.exe check.exe read.exe write.exe basis.exe repres.exe nlqfast.exe 
 
+distq.exe : distq.c
+	gcc -O3 -march=native -fopenmp -o distq.exe  dist.c
+
 debug:
 	$(MAKE)  -B DEBUG=1
 
