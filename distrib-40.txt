@@ -1,0 +1,15 @@
+anf=cde+adf+bdf+bef+bdg+aeg+defg
+NQ=40 COV=128
+40:11264 44:307200 48:1670144 52:108544
+--
+anf=ace+bce+bde+bcf+adf+abg
+NQ=40 COV=128
+40:11264 44:307200 48:1768448 52:10240
+--
+anf=bcd+ace+bce+acf+abcf+bdf+cdf+aef+acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg
+NQ=40 COV=128
+40:14336 44:290816 48:1589248 52:202752
+--
+anf=abd+ace+ade+bcf+bdf+cef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg
+NQ=40 COV=128
+40:14336 44:290816 48:1598464 52:193536
