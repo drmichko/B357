@@ -1,153 +1,153 @@
 anf=abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2944 42:71040 46:826112 50:1196032 54:1024
 anf=abd+acd+bcd+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1792 42:75520 46:854784 50:1162496 54:2560
 anf=abc+abce+ade+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+beg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2816 42:72448 46:809728 50:1206720 54:5440
 anf=abd+bcd+ace+bce+abce+acde+bcdf+acef+bcef+adef+bdef+cdg+aeg+beg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2576 42:73040 46:822528 50:1193576 54:5432
 anf=abd+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2688 42:73856 46:797440 50:1209728 54:13440
 anf=acd+abe+ace+abce+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2944 42:71040 46:825088 50:1198080
 anf=acd+abce+ade+acde+bcdf+acef+bcef+adef+bdef+bcg+cdg+aeg+beg+ceg+deg+cfg+dfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:896 42:77184 46:912128 50:1106944
 anf=abc+ace+bce+bde+bcf+adf+abg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2112 42:74048 46:852352 50:1165952 54:2688
 anf=cde+adf+bdf+bef+bdg+aeg+defg
-NQ= 40 COV= 128
+NQ=40 COV=128
 40:11264 44:307200 48:1670144 52:108544
 anf=abc+acd+abde+adf+bdf+bcdf+aef+bef+abef+cef+abcef+adg+bdg+cdg+abcdg+beg+aceg+abfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1152 40:7424 42:38016 44:140288 46:427712 48:765792 50:581120 52:135072 54:576
 anf=abc+bcd+cde+bdf+acdf+aef+abef+abcef+adg+abcdg+abeg+ceg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1152 40:7424 42:38016 44:140288 46:427136 48:767136 50:581696 52:133728 54:576
 anf=abc+abe+bde+cde+acde+abdf+cdf+aef+abef+abcef+adg+abcdg+abeg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1152 40:7424 42:38016 44:140288 46:427136 48:766656 50:581984 52:134208 54:288
 anf=abc+abd+bcd+ade+abcde+bdf+cdef+acg+abeg+afg+bfg+cfg+bcfg+dfg+adfg+efg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:960 40:7808 42:37312 44:142336 46:429600 48:764368 50:579792 52:134064 54:912
 anf=abe+abcde+bcf+bdf+acdf+bcdf+cef+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1216 40:7680 42:37312 44:141312 46:418048 48:761920 50:590272 52:137664 54:1728
 anf=abc+ace+ade+abcde+bcf+bdf+acdf+bcdf+cef+bcef+adg+cdg+bcdg+ceg+aceg+abfg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1472 40:7168 42:35520 44:145408 46:417568 48:776768 50:592736 52:119232 54:1280
 anf=abc+bcd+cde+abcde+acf+bcf+adf+acdf+bcdf+aef+bef+cef+bcef+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1408 40:7168 42:36224 44:144768 46:413568 48:770624 50:595648 52:126016 54:1728
 anf=abc+abd+bde+abcde+acf+bcf+bdf+acdf+bcdf+aef+bef+cef+bcef+adg+bdg+cdg+bcdg+aeg+ceg+aceg+abfg+cfg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:256 40:7616 42:39168 44:144128 46:459264 48:769600 50:549888 52:127232
 anf=abd+acd+ace+abcde+bcf+adef+abcg+cdg+beg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1856 40:3584 42:49216 44:116736 46:458688 48:781696 50:538624 52:146560 54:192
 anf=abd+acd+ace+abcde+bcf+cdf+bef+def+adef+abcg+deg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1120 40:7168 42:37344 44:145408 46:423424 48:784192 50:585728 52:111808 54:960
 anf=acd+bcd+bce+abcde+abcf+bdf+aef+abg+deg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1856 40:3584 42:49216 44:116736 46:459648 48:774400 50:536704 52:153856 54:1152
 anf=acd+bcd+bce+abcde+abf+abcf+bdf+aef+abg+deg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1856 40:3584 42:49216 44:116480 46:462208 48:778496 50:534784 52:150016 54:512
 anf=abd+acd+ace+abcde+abcf+cdg+beg+afg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1408 40:6336 42:36224 44:149888 46:429312 48:755712 50:581632 52:136576 56:64
 anf=ace+bce+bde+bcf+adf+abg
-NQ= 40 COV= 128
+NQ=40 COV=128
 40:11264 44:307200 48:1768448 52:10240
 anf=abc+abd+bcd+abcd+ace+bce+ade+bcde+bcf+adf+bdf+bef+cdef+bcg+abcg+adg+cdg+aeg+abfg+aefg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2576 42:73040 46:822864 50:1195172 54:3500
 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+acf+bcf+aef+bef+bcef+cdef+acg+bcg+bdg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2368 42:73280 46:836096 50:1182624 54:2784
 anf=abc+bcd+ace+ade+cde+bcde+acf+bcf+aef+bcef+cdef+bcg+adg+bdg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2304 42:73984 46:837888 50:1178048 54:4928
 anf=abc+ace+bce+bde+cde+bcde+adf+bdf+aef+bcef+cdef+aeg+beg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2368 42:73280 46:840160 50:1179808 54:1536
 anf=abc+acd+bcd+ace+ade+bde+cde+bcde+aef+bef+bcef+cdef+acg+bcg+bfg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2432 42:72576 46:847616 50:1173760 54:768
 anf=abc+bcd+abe+ace+bce+bde+abf+abcf+adf+acef+cdef+bdg+bceg+bdfg+aefg+befg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2432 42:72576 46:834944 50:1184896 54:2304
 anf=bcd+ace+bde+abcf+adf+acef+cdef+abg+cdg+bceg+bdfg+aefg+befg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2816 42:72448 46:810112 50:1207216 54:4560
 anf=abc+abd+acd+abe+ace+ade+bde+bcf+abcf+adf+aef+acef+cdef+abg+cdg+bceg+bdfg+aefg+befg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2112 42:74048 46:850832 50:1167824 54:2336
 anf=bcd+ace+bce+abf+abcf+adf+bdf+acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1664 42:74880 46:878288 50:1142320
 anf=bcd+ace+bce+acf+abcf+bdf+cdf+aef+acef+cdef+abg+bdg+bceg+deg+bdfg+aefg+befg
-NQ= 40 COV= 128
+NQ=40 COV=128
 40:14336 44:290816 48:1589248 52:202752
 anf=abd+bcd+ace+bce+ade+bde+acde+abf+acf+abcf+bdf+cdf+bdef+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2944 42:71040 46:809216 50:1209344 54:4608
 anf=abd+bcd+abe+ace+bce+ade+bde+acde+abf+bcf+abcf+bdf+cdf+bdef+abg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2816 42:72448 46:809728 50:1207296 54:4864
 anf=bce+ade+acde+abf+abcf+cdf+bdef+acg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2336 42:73632 46:835904 50:1183072 54:2208
 anf=abd+acd+abe+bce+ade+cde+acde+abf+abcf+adf+bdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2816 42:72448 46:810496 50:1206400 54:4992
 anf=abd+acd+abe+ade+bde+acde+abf+bcf+abcf+adf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2816 42:72448 46:810496 50:1207488 54:3904
 anf=abd+bcd+abe+ade+bde+acde+abf+bcf+abcf+bdf+cdf+bdef+abg+acg+bcg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2880 42:71744 46:811264 50:1207872 54:3392
 anf=abc+acd+ace+bce+ade+bde+cde+acde+abf+acf+bcf+abcf+adf+bdf+aef+bef+bdef+acg+bdg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2752 42:73152 46:809216 50:1206784 54:5248
 anf=abc+bcd+abe+bce+ade+cde+acde+abf+acf+bcf+abcf+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1792 42:75520 46:854784 50:1161920 54:3136
 anf=bce+acde+abcf+cdf+aef+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1920 42:74112 46:868608 50:1152512
 anf=abd+acd+abe+bce+bde+cde+acde+abf+acf+bcf+abcf+adf+bdf+aef+bef+bdef+abg+adg+bdg+bcdg+abeg+adfg+cefg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2688 42:73856 46:808704 50:1206912 54:4992
 anf=acd+bcd+abe+bce+bde+cde+abf+acf+bcf+adf+aef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2016 42:75104 46:850304 50:1166144 54:3584
 anf=abd+ace+ade+bcf+bdf+cef+abg+abcg+adg+bdg+abdg+aceg+bcfg+defg
-NQ= 40 COV= 128
+NQ=40 COV=128
 40:14336 44:290816 48:1598464 52:193536
 anf=abc+abe+ace+ade+bde+abf+adf+cdf+bcg+adg+abeg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:1568 42:75936 46:869120 50:1149520 54:1008
 anf=abd+acd+bcd+abe+bde+cde+acf+adf+bdf+aef+bcg+adg+abeg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2016 42:75104 46:850304 50:1167040 54:2688
 anf=abc+abe+ace+ade+bde+abf+adf+cdf+aef+bcg+adg+abeg+acfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2016 42:75104 46:840448 50:1174544 54:5040
 anf=acd+bcd+bce+abf+abcg+bdg+aeg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2112 42:74048 46:851392 50:1167680 54:1920
 anf=abc+acd+bce+cde+acf+bcf+bdf+abg+bcg+adg+bcfg+defg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:2112 42:74048 46:857984 50:1162240 54:768
 anf=abd+ace+bde+acf+bcf+adf+abcef+cdef+acg+adg+bdg+cdg+abcdg+aeg+aceg+bceg+deg+bdeg+afg+bfg+cfg+bcfg+dfg+adfg+efg
-NQ= 38 COV= 128
+NQ=38 COV=128
 38:608 40:7712 42:38240 44:143232 46:443744 48:772328 50:565416 52:125304 54:568
